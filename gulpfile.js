@@ -1,20 +1,21 @@
-var gulp         = require('gulp');
-var gutil        = require('gulp-util');
-var uglify       = require('gulp-uglify');
-var sass         = require('gulp-sass');
-var sourceMaps   = require('gulp-sourcemaps');
-var imagemin     = require('gulp-imagemin');
-var browserSync  = require('browser-sync');
-var autoprefixer = require('gulp-autoprefixer');
-var plumber      = require('gulp-plumber');
-var eslint       = require('gulp-eslint');
-var clean        = require('gulp-clean');
-var gulpSequence = require('gulp-sequence');
-var svgSymbols = require('gulp-svg-symbols');
-var fileinclude = require('gulp-file-include');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const sourceMaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
+const eslint = require('gulp-eslint');
+const clean = require('gulp-clean');
+const gulpSequence = require('gulp-sequence');
+const svgSymbols = require('gulp-svg-symbols');
+const fileinclude = require('gulp-file-include');
+const babel = require('gulp-babel');
 
 // Local server
-gulp.task('browserSync', function() {
+gulp.task('browserSync', () => {
     browserSync({
         server: {
             baseDir: "dist/"
@@ -26,8 +27,8 @@ gulp.task('browserSync', function() {
     });
 });
 
-// Lint and minify the scripts
-gulp.task('scripts', function() {
+// Lint, transpile and minify the scripts
+gulp.task('scripts', () => {
     return gulp.src(['src/scripts/**/*.js', '!src/scripts/vendor/**/*.js'])
         .pipe(plumber())
         // eslint() attaches the lint output to the "eslint" property
@@ -36,6 +37,10 @@ gulp.task('scripts', function() {
         // eslint.format() outputs the lint results to the console.
         // Alternatively use eslint.formatEach() (see Docs).
         .pipe(eslint.format())
+        // Transpile into JS the browsers can understand
+        .pipe(babel({
+          presets: ['es2015']
+        }))
         // Minify the scripts
         .pipe(uglify())
         // Catch errors
@@ -45,14 +50,9 @@ gulp.task('scripts', function() {
 });
 
 // Compile the SCSS files
-gulp.task('styles', function() {
+gulp.task('styles', () => {
     return gulp.src('src/styles/main.scss')
-        .pipe(plumber({
-          errorHandler: function (err) {
-            console.log(err);
-            this.emit('end');
-          }
-        }))
+        .pipe(plumber())
         // Get sourceMaps ready
         .pipe(sourceMaps.init())
         // Minify the CSS output
@@ -75,7 +75,7 @@ gulp.task('styles', function() {
 
 // SVG icons
 // This will generate an 'SVG sprite' which can be referenced using the <symbol> tag (see example in index.html)
-gulp.task('svgSymbols', function () {
+gulp.task('svgSymbols', () => {
     return gulp
         .src('src/images/icons/*.svg')
         .pipe(svgSymbols())
@@ -83,7 +83,7 @@ gulp.task('svgSymbols', function () {
 });
 
 // Minify images
-gulp.task('images', function(tmp) {
+gulp.task('images', function() {
     gulp.src(['src/images/**/*', '!src/icons/*'])
     // Prevents pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
@@ -95,7 +95,7 @@ gulp.task('images', function(tmp) {
 
 // Build our final HTML from the templates (note this works even if there are no references to HTML partials included
 // on a page, in which case it will simply copy it to dist/
-gulp.task('fileinclude', function() {
+gulp.task('fileinclude', () => {
     gulp.src(['src/*.html'])
         .pipe(fileinclude({
             prefix: '@@',
@@ -106,7 +106,7 @@ gulp.task('fileinclude', function() {
 });
 
 // Copy all other files we need into dist/
-gulp.task('copy', function() {
+gulp.task('copy', () => {
 
     // Grab vendor files (excluded from the 'scripts' task)
     gulp.src('src/scripts/vendor/**/*.js')
@@ -125,7 +125,7 @@ gulp.task('copy', function() {
 });
 
 // Cleans our dist/ directory to make sure it only includes the generated files
-gulp.task('clean', function () {
+gulp.task('clean', () => {
     return gulp.src('dist/', {read: false})
         .pipe(clean());
 });
