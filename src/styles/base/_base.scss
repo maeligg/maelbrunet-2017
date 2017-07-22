@@ -1,0 +1,53 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Body font-size is set to 10px to make it is easier to use rem units throughout the site, while leaving the
+ * possibility for users to scale up font-size if they so wish
+ */
+body {
+  position: relative;
+  min-width: calc(100vw - 40px);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  font-size: 62.5%;
+  color: $text-color;
+  font-family: $text-font-stack;
+  border: 4px solid transparent;
+  border-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
+  border-image-slice: 1;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $link-color;
+  text-decoration: underline dashed $link-color;
+
+  @include on-event {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+#cornifycount {
+  display: none;
+}

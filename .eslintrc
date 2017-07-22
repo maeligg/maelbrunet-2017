@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb-base",
+
+  "rules": {
+    "func-names": "off"
+  },
+
+  "env": {
+    "browser": 1
+  },
+
+  // Declare allowed global variables below
+  "globals": {
+    "svg4everybody" : false,
+  }
+}

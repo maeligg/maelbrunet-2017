@@ -1,0 +1,29 @@
+/// Regular font family
+/// @type List
+$text-font-stack: 'Raleway', sans-serif;
+
+$blue: #059df6;
+$green: #31d78b;
+$text-color: #111;
+$link-color: $green;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1080px;
+$large-width: 800px;
+$medium-width: 70vw;
+$small-width: 620px;
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1600px,
+) !default;
