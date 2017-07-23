@@ -1,5 +1,8 @@
-header {
+nav {
   display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
   .logo {
     position: relative;
     z-index: 10;
@@ -12,7 +15,7 @@ header {
     background-image: linear-gradient(to bottom right, $green 0%, $blue 100%);
     transition: all .3s;
 
-    &:hover {
+    @include on-event {
       transform: scale(1.1);
     }
 
@@ -61,8 +64,10 @@ header {
     padding: 0;
     animation: fade-in-right 1s ease-in-out;
 
-    &:hover .line {
-      opacity: 1;
+    @include on-event {
+      .line {
+        opacity: 1;
+      }
     }
 
     li {
@@ -70,19 +75,40 @@ header {
       list-style: none;
       font-size: 2rem;
 
-      &:nth-child(1):hover ~ .line {
-        left: 10px; }
-      &:nth-child(2):hover ~ .line {
-        left: 235px; }
-      &:nth-child(3):hover ~ .line {
-        left: 480px; }
-      
+      @include on-event {
+        &:nth-child(1) ~ .line {
+          left: 0;
+        }
+        &:nth-child(2) ~ .line {
+          left: 180px;
+        }
+        &:nth-child(3) ~ .line {
+          left: 390px;
+        }
+      }
+
+      &.active {
+        &:nth-child(1) ~ .line {
+          left: 0;
+        }
+        &:nth-child(2) ~ .line {
+          left: 180px;
+        }
+        &:nth-child(3) ~ .line {
+          left: 390px;
+        }
+
+        a {
+          color: $link-color;
+        }
+      }
+
       a {
         color: $text-color;
         text-decoration: none;
         text-transform: uppercase;
         
-        &:hover {
+        @include on-event {
           color: $link-color;
           text-decoration: none;
         }
@@ -93,10 +119,10 @@ header {
       opacity: 0;
       position: absolute;
       left: -140px;
+      bottom: -10px;
       transition: 0.7s ease-in-out;
-      width: 140px;
+      width: 110px;
       height: 6px;
-      bottom: 20px;
       background: $link-color;
     }
   }

@@ -3,26 +3,20 @@
 $text-font-stack: 'Raleway', sans-serif;
 
 $blue: #059df6;
-$green: #31d78b;
+$green: #11af60;
 $text-color: #111;
 $link-color: $green;
 
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1080px;
-$large-width: 800px;
-$medium-width: 70vw;
-$small-width: 620px;
-
-
-
+$max-width: 60rem;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
+  'small': 400px,
   'medium': 768px,
   'large': 1024px,
   'xlarge': 1600px,

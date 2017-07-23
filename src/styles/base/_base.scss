@@ -22,11 +22,11 @@ html {
 body {
   position: relative;
   min-width: calc(100vw - 40px);
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   margin: 20px;
-  padding: 20px;
+  padding: 20px 20px 60px;
   font-size: 62.5%;
   color: $text-color;
   font-family: $text-font-stack;
@@ -35,9 +35,6 @@ body {
   border-image-slice: 1;
 }
 
-/**
- * Basic styles for links
- */
 a {
   color: $link-color;
   text-decoration: underline dashed $link-color;
@@ -48,6 +45,6 @@ a {
   }
 }
 
-#cornifycount {
-  display: none;
+h2 {
+  margin-top: 3rem;
 }

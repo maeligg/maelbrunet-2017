@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 // 1. Configuration and helpers
 @import
@@ -18,11 +18,11 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/main',
   'layout/footer';
 
 // 5. Components
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/about';
