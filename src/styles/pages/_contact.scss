@@ -1,0 +1,84 @@
+.contact {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .animation, .form {
+    width: 100%;
+    padding: 0 40px;
+
+    @include respond-to(medium) {
+      width: 50%;
+    }
+  }
+
+  .animation {
+    position: relative;
+
+    .plane {
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      fill: $blue;
+      width: 60px;
+      transition: all 1s ease-in-out;
+      animation: fly 10s infinite;
+    }
+
+    @keyframes fly {
+
+      45% {
+        transform: rotate(0);
+      }
+
+      50% {
+        bottom: 100%;
+        left: 100%;
+        transform: rotate(180deg);
+      }
+
+      95% {
+        transform: rotate(180deg);
+      }
+
+      100% {
+        bottom: 0;
+        left: 40px;
+        transform: rotate(0);
+      }
+    }
+
+    .fly-path {
+      fill: none;
+      stroke: #000;
+    }
+  }
+
+  .form {
+    font-size: 1rem;
+
+    label, input, textarea {
+      display: block;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    input[type=text], input[type=email], textarea {
+      margin-bottom: 20px;
+      padding: 5px;
+    }
+
+    abbr {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $red;
+    }
+
+    .at {
+      color: $green;
+    }
+  }
+}

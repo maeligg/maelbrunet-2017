@@ -13,6 +13,14 @@
       margin: 0 0 2rem 2rem;
     }
   }
+  
+  h1, h2 {
+    text-align: center;
+    
+    @include respond-to(medium) {
+      text-align: left;
+    }
+  }
 
   .❤ {
     display: flex;
@@ -23,12 +31,13 @@
     li {
       flex: 0 0 100%;
       min-height: 130px;
+      margin: 1rem 0;
       list-style: none;
       text-align: center;
 
       @include respond-to(small) {
         flex: 0 0 calc(100% / 2 - 2rem);
-        margin: .5rem 1rem;
+        margin: 1rem;
       }
 
       @include respond-to(medium) {
@@ -45,7 +54,7 @@
         justify-content: center;
         flex-direction: column;
         height: calc(100% - 40px);
-        padding: 10px;
+        padding: 20px;
         border: 2px solid $green;
         word-break: break-word;
         hyphens: auto;
@@ -70,10 +79,10 @@
       height: 40px;
       line-height: 40px;
       margin: 0 auto -10px;
-      fill: $blue;
-      color: $blue;
       font-size: 2.5rem;
       font-weight: bold;
+      fill: $blue;
+      color: $blue;
     }
 
     .html {
@@ -97,10 +106,9 @@
       }
     }
 
-    .svg, .jam {
+    .svg, .jam, .kiss {
       width: auto;
       font-size: 1.5rem;
     }
   }
-
 }

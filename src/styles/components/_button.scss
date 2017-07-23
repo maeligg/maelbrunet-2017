@@ -1,4 +1,39 @@
-button, a.button {
+button, .button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
   border: none;
-  background-color: transparent;
+  background-color: $link-color;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    height: 155px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: .5;
+    transform: rotate(-35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  @include on-event {
+    &::after {
+      top: -100%;
+      left: 150%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
 }

@@ -22,7 +22,7 @@ html {
 body {
   position: relative;
   min-width: calc(100vw - 40px);
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 105px);
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -42,12 +42,15 @@ a {
   @include on-event {
     color: $link-color;
     text-decoration: underline;
+    font-weight: bold;
   }
 }
-h1, h2, h3 {
-  color: $blue;  
+
+h1 {
+  font-size: 2rem;
 }
 
 h2 {
   margin-top: 3rem;
+  font-size: 1.5rem;
 }
