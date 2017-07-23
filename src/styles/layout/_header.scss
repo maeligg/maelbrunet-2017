@@ -1,19 +1,30 @@
 nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+
+  @include respond-to(medium) {
+    justify-content: flex-start;
+  }
 
   .logo {
     position: relative;
     z-index: 10;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-shrink: 0;
-    width: 150px;
-    height: 150px;
-    padding: 20px 20px 20px 30px;
+    padding: 10px 10px 10px 15px;
     border-radius: 50%;
     background-image: linear-gradient(to bottom right, $green 0%, $blue 100%);
     transition: all .3s;
+
+    @include respond-to(medium){
+      width: 150px;
+      height: 150px;
+      padding: 20px 20px 20px 30px;
+    }
 
     @include on-event {
       transform: scale(1.1);
@@ -55,14 +66,76 @@ nav {
     }
   }
 
-  .main-nav {
+  .menu-toggle {
     position: relative;
-    display: flex;
+    z-index: 200;
+
+    @include respond-to(medium) {
+      display: none;
+    }
+    
+    &.open {
+      position: fixed;
+      right: 40px;
+
+      .top-bun {
+        transform: translateY(-10px);
+      }
+
+      .salad {
+        transform: translateY(5px);
+      }
+
+      .meat {
+        transform: translateY(-5px);
+      }
+
+      .bottom-bun {
+        transform: translateY(10px);
+      }
+
+      ~ .main-nav {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 180px 40px 0 0;
+        text-align: right;
+        background-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
+        animation: none;
+      }
+    }
+
+    .menu-icon {
+      height: 80px;
+      width: 80px;
+
+      g, path {
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    .menu-text {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .main-nav {
+    display: none;
+    position: relative;
     align-items: center;
     height: 100%;
     margin: 0;
     padding: 0;
     animation: fade-in-right 1s ease-in-out;
+
+    @include respond-to(medium) {
+      display: flex;
+    }
 
     @include on-event {
       .line {

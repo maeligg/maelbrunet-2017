@@ -1,4 +1,4 @@
-const unicorns = function () {
+const unicorns = () => {
   const pressed = [];
   const secretCode = 'unicorn';
 
@@ -11,7 +11,25 @@ const unicorns = function () {
   });
 };
 
+const toggleOpen = () => {
+  const toggleElements = document.querySelectorAll('.js-toggle-open');
+  toggleElements.forEach((element) => {
+    element.addEventListener('click', function () {
+      this.classList.toggle('open');
+    });
+  });
+};
+
 window.onload = function () {
   svg4everybody();
+  toggleOpen();
   unicorns();
 };
+
+window.addEventListener('resize', () => {
+  const menu = document.querySelector('.menu-toggle');
+
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+  }
+});
