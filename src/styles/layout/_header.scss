@@ -44,8 +44,8 @@ nav {
     }
 
     @include respond-to(medium){
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       padding: 20px 20px 20px 30px;
     }
 
@@ -111,7 +111,7 @@ nav {
       display: none;
     }
 
-    &.open, &:hover {
+    &.active, &:hover {
       .top-bun {
         transform: translateY(-10px);
       }
@@ -129,7 +129,7 @@ nav {
       }
     }
 
-    &.open {
+    &.active {
       position: fixed;
       right: 45px;
 
@@ -231,6 +231,7 @@ nav {
         @include on-event {
           color: $link-color;
           text-decoration: none;
+          font-weight: normal;
         }
       }
     }

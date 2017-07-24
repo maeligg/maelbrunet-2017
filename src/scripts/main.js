@@ -1,3 +1,62 @@
+// A generic class toggler on click
+const toggleActive = () => {
+  const toggleElements = document.querySelectorAll('.js-toggle-active');
+  toggleElements.forEach((element) => {
+    element.addEventListener('click', () => {
+      element.classList.toggle('active');
+    });
+  });
+};
+
+
+// Relaunch animation that need to check for specific DOM elements
+const checkDOM = () => {
+  initTyping();
+  toggleActive();
+};
+
+
+// Page transition using barba.js
+const pageTransition = () => {
+  document.querySelector('.barba-container').classList.add('visible');
+
+  const FadeTransition = Barba.BaseTransition.extend({
+    start() {
+      Promise
+        .all([this.newContainerLoading, this.fadeOut()])
+        .then(this.fadeIn.bind(this));
+    },
+
+    fadeOut() {
+      const deferred = Barba.Utils.deferred();
+      const mobileMenu = document.querySelector('.menu-toggle');
+
+      if (mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+      }
+
+      this.oldContainer.classList.remove('visible');
+      this.oldContainer.addEventListener('transitionend', () => {
+        deferred.resolve();
+      }, false);
+
+      return deferred.promise;
+    },
+
+    fadeIn() {
+      checkDOM();
+      this.newContainer.classList.add('visible');
+      this.done();
+    },
+  });
+
+  Barba.Pjax.getTransition = () => FadeTransition;
+
+  Barba.Pjax.start();
+};
+
+
+// Better than konami code
 const unicorns = () => {
   const pressed = [];
   const secretCode = 'unicorn';
@@ -11,36 +70,20 @@ const unicorns = () => {
   });
 };
 
-const toggleOpen = () => {
-  const toggleElements = document.querySelectorAll('.js-toggle-open');
-  toggleElements.forEach((element) => {
-    element.addEventListener('click', function () {
-      this.classList.toggle('open');
-    });
-  });
-};
 
-const fly = () => {
-  const plane = document.querySelector('.js-plane');
-  plane.addEventListener('click', () => {
-    plane.classList.add('fly');
-    setTimeout(() => {
-      plane.classList.remove('fly');
-    }, 1000);
-  });
-};
-
-window.onload = function () {
+// Call functions
+window.onload = () => {
   svg4everybody();
-  toggleOpen();
-  fly();
+  initTyping();
+  pageTransition();
+  toggleActive();
   unicorns();
 };
 
 window.addEventListener('resize', () => {
   const menu = document.querySelector('.menu-toggle');
 
-  if (menu.classList.contains('open')) {
-    menu.classList.remove('open');
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
   }
 });

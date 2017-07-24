@@ -36,15 +36,15 @@
 
       @keyframes jiggle {
         from {
-          transform: rotate(-2deg);
+          transform: rotate(-1deg);
         }
         to {
-          transform: rotate(2deg);
+          transform: rotate(1deg);
         }
       }
       
-      &.fly {
-        animation: fly 1s ease-in;
+      &.active {
+        animation: fly 1s ease-in forwards;
       }
     }
 
