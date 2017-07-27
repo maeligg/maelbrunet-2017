@@ -31,8 +31,8 @@ const pageTransition = () => {
       const deferred = Barba.Utils.deferred();
       const mobileMenu = document.querySelector('.menu-toggle');
 
-      if (mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
       }
 
       this.oldContainer.classList.remove('visible');
@@ -71,12 +71,22 @@ const unicorns = () => {
 };
 
 
+// Mobile menu open toggle
+const toggleMenu = () => {
+  const menuToggler = document.querySelector('.js-menu-toggle');
+  menuToggler.addEventListener('click', () => {
+    menuToggler.classList.toggle('open');
+  });
+};
+
+
 // Call functions
 window.onload = () => {
   svg4everybody();
   initTyping();
   pageTransition();
   toggleActive();
+  toggleMenu();
   unicorns();
 };
 

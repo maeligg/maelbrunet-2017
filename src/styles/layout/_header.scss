@@ -111,7 +111,7 @@ nav {
       display: none;
     }
 
-    &.active, &:hover {
+    &.open, &:hover {
       .top-bun {
         transform: translateY(-10px);
       }
@@ -129,7 +129,7 @@ nav {
       }
     }
 
-    &.active {
+    &.open {
       position: fixed;
       right: 45px;
 
