@@ -36,12 +36,13 @@
       text-align: center;
 
       @include respond-to(small) {
-        flex: 0 0 calc(100% / 2 - 2rem);
-        margin: 1rem;
+        flex: 0 0 calc(100% / 2 - 1rem);
+        margin: .5rem;
       }
 
       @include respond-to(medium) {
         flex: 0 0 calc(100% / 3 - 2rem);
+        margin: 1rem;
       }
 
       @include respond-to(large) {

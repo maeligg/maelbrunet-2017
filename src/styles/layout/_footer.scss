@@ -31,8 +31,29 @@ footer {
     }
 
     @include on-event {
+      border-radius: 0;
+      background-color: $green;
+
       .social-icon {
-        transform: scale(1.3);
+        fill: #fff;
+      }
+
+      @keyframes buzz {
+        25% {
+          transform: translate(-2px, 2px) rotate(-2deg);
+        }
+
+        50% {
+          transform: translate(2px, 2px) rotate(2deg);
+        }
+
+        75% {
+          transform: translate(2px, -2px) rotate(2deg);
+        }
+
+        100% {
+          transform: translate(-2px, -2px) rotate(-2deg);
+        }
       }
     }
 
