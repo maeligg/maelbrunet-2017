@@ -1,7 +1,7 @@
 // A generic class toggler on click
 const toggleActive = () => {
   const toggleElements = document.querySelectorAll('.js-toggle-active');
-  toggleElements.forEach((element) => {
+  [].forEach.call(toggleElements, (element) => {
     element.addEventListener('click', () => {
       element.classList.toggle('active');
     });
@@ -80,6 +80,14 @@ const toggleMenu = () => {
 };
 
 
+// Greeting message for the console
+const consoleGreet = () => {
+  console.log('%c%s',
+    'color: #11af60; font-style: italic;',
+    'Why, hello there! If you\'re looking for the sources of this site, they\'re all available at https://github.com/maeligg/maelbrunet');
+};
+
+
 // Call functions
 window.onload = () => {
   svg4everybody();
@@ -88,6 +96,7 @@ window.onload = () => {
   toggleActive();
   toggleMenu();
   unicorns();
+  consoleGreet();
 };
 
 window.addEventListener('resize', () => {
