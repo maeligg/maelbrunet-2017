@@ -30,7 +30,7 @@ gulp.task('browserSync', () => {
 
 // Lint, transpile and minify authored scripts
 gulp.task('scripts', () => {
-    return gulp.src(['src/scripts/**/*.js', '!src/scripts/vendor/**/*.js'])
+    return gulp.src(['src/scripts/main.js'])
         .pipe(plumber())
         // eslint() attaches the lint output to the "eslint" property
         // of the file object so it can be used by other modules.
@@ -89,13 +89,12 @@ gulp.task('svgSymbols', () => {
 });
 
 // Minify images
-gulp.task('images', function() {
-    gulp.src(['src/images/**/*', '!src/icons/*'])
+gulp.task('imagemin', function() {
+    gulp.src(['src/images/**/*', '!src/images/icons/*'])
     // Prevents pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'))
-        //notify browserSync to refresh
 });
 
 // Build our final HTML from the templates (note this works even if there are no references to HTML partials included
@@ -112,15 +111,6 @@ gulp.task('fileinclude', () => {
 // Copy all other files we need into dist/
 gulp.task('copy', () => {
 
-    // Grab our fonts
-    gulp.src('src/fonts/**/*')
-        .pipe(plumber())
-        .pipe(gulp.dest('dist/fonts'));
-
-    // Grab our images (in case 'imagemin' is not run
-    gulp.src('src/images/*')
-        .pipe(plumber())
-        .pipe(gulp.dest('dist/images'));
 });
 
 // Cleans our dist/ directory to make sure it only includes the generated files
@@ -129,9 +119,16 @@ gulp.task('clean', () => {
         .pipe(clean());
 });
 
-// Note that the default task does not include 'images' as this task can be very long and should be done manually or
-// when preparing a release package.
-gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync'));
+// Watches
+gulp.watch('src/styles/**/*.scss', ['styles']);
+gulp.watch('src/**/*.html', ['fileinclude']);
+gulp.watch('src/scripts/main.js', ['scripts']);
+gulp.watch('src/scripts/vendor/**/*.js', ['vendor']);
+gulp.watch('src/images/icons/*.svg', ['svgSymbols']);
+gulp.watch(['src/images/**/*', '!src/images/icons/*'], ['imagemin']);
+
+// Development build
+gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync'));
 
 // Production build
-gulp.task('build', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'vendor', 'styles'], 'copy'));
+gulp.task('build', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy'));
