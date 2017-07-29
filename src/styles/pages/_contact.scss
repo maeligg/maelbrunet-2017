@@ -70,6 +70,7 @@
 
     label {
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     input[type=text], input[type=email], textarea {
@@ -81,6 +82,10 @@
       font-size: 1.5rem;
       text-decoration: none;
       color: $red;
+    }
+
+    .required-message {
+      font-style: italic;
     }
 
     .at {
