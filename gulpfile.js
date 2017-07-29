@@ -13,6 +13,7 @@ const gulpSequence = require('gulp-sequence');
 const svgSymbols = require('gulp-svg-symbols');
 const fileinclude = require('gulp-file-include');
 const babel = require('gulp-babel');
+var concat = require('gulp-concat');
 
 // Local server
 gulp.task('browserSync', () => {
@@ -27,7 +28,7 @@ gulp.task('browserSync', () => {
     });
 });
 
-// Lint, transpile and minify the scripts
+// Lint, transpile and minify authored scripts
 gulp.task('scripts', () => {
     return gulp.src(['src/scripts/**/*.js', '!src/scripts/vendor/**/*.js'])
         .pipe(plumber())
@@ -47,6 +48,13 @@ gulp.task('scripts', () => {
         .on('error', gutil.log)
         .pipe(gulp.dest('dist/scripts'))
         .pipe(browserSync.reload({stream: true}));
+});
+
+// Concat vendor scripts
+gulp.task('vendor', function() {
+  return gulp.src('src/scripts/vendor/**/*.js')
+    .pipe(concat('vendors.js'))
+    .pipe(gulp.dest('dist/scripts'));
 });
 
 // Compile the SCSS files
@@ -108,11 +116,6 @@ gulp.task('fileinclude', () => {
 // Copy all other files we need into dist/
 gulp.task('copy', () => {
 
-    // Grab vendor files (excluded from the 'scripts' task)
-    gulp.src('src/scripts/vendor/**/*.js')
-        .pipe(plumber())
-        .pipe(gulp.dest('dist/scripts/vendor'));
-
     // Grab our fonts
     gulp.src('src/fonts/**/*')
         .pipe(plumber())
@@ -132,10 +135,10 @@ gulp.task('clean', () => {
 
 // Note that the default task does not include 'images' as this task can be very long and should be done manually or
 // when preparing a release package.
-gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'styles'], 'copy', 'browserSync', function() {
+gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync', function() {
     // A list of watchers, so it will watch all of the following files waiting for changes.
     // Note that gulp.watch does not trigger when a new file is created or deleted.
-    gulp.watch('src/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/scripts/**/*.js', ['scripts', 'vendor']);
     gulp.watch('src/styles/**/*.scss', ['styles']);
     gulp.watch('src/images/*', ['images']);
     gulp.watch('src/images/icons/*', ['svgSymbols']);
