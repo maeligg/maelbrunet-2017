@@ -13,7 +13,7 @@ const gulpSequence = require('gulp-sequence');
 const svgSymbols = require('gulp-svg-symbols');
 const fileinclude = require('gulp-file-include');
 const babel = require('gulp-babel');
-var concat = require('gulp-concat');
+const concat = require('gulp-concat');
 
 // Local server
 gulp.task('browserSync', () => {
@@ -38,7 +38,7 @@ gulp.task('scripts', () => {
         // eslint.format() outputs the lint results to the console.
         // Alternatively use eslint.formatEach() (see Docs).
         .pipe(eslint.format())
-        // Transpile into JS the browsers can understand
+        // Transpile into JS te browsers can understand
         .pipe(babel({
           presets: ['es2015']
         }))
@@ -47,14 +47,13 @@ gulp.task('scripts', () => {
         // Catch errors
         .on('error', gutil.log)
         .pipe(gulp.dest('dist/scripts'))
-        .pipe(browserSync.reload({stream: true}));
 });
 
 // Concat vendor scripts
 gulp.task('vendor', function() {
   return gulp.src('src/scripts/vendor/**/*.js')
     .pipe(concat('vendors.js'))
-    .pipe(gulp.dest('dist/scripts'));
+    .pipe(gulp.dest('dist/scripts'))
 });
 
 // Compile the SCSS files
@@ -78,7 +77,6 @@ gulp.task('styles', () => {
         // Get our sources via sourceMaps
         .pipe(sourceMaps.write())
         .pipe(gulp.dest('dist/styles'))
-        .pipe(browserSync.reload({stream: true}));
 });
 
 // SVG icons
@@ -98,7 +96,6 @@ gulp.task('images', function() {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'))
         //notify browserSync to refresh
-        .pipe(browserSync.reload({stream: true}));
 });
 
 // Build our final HTML from the templates (note this works even if there are no references to HTML partials included
@@ -110,7 +107,6 @@ gulp.task('fileinclude', () => {
             basepath: 'src/html-partials'
         }))
         .pipe(gulp.dest('dist'))
-        .pipe(browserSync.reload({stream: true}));
 });
 
 // Copy all other files we need into dist/
@@ -135,13 +131,7 @@ gulp.task('clean', () => {
 
 // Note that the default task does not include 'images' as this task can be very long and should be done manually or
 // when preparing a release package.
-gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync', function() {
-    // A list of watchers, so it will watch all of the following files waiting for changes.
-    // Note that gulp.watch does not trigger when a new file is created or deleted.
-    gulp.watch('src/scripts/**/*.js', ['scripts', 'vendor']);
-    gulp.watch('src/styles/**/*.scss', ['styles']);
-    gulp.watch('src/images/*', ['images']);
-    gulp.watch('src/images/icons/*', ['svgSymbols']);
-    gulp.watch('src/**/*.html', ['fileinclude']);
-    gulp.watch(['src/scripts/vendor/**/*.js', 'src/fonts/**/*', 'dist/images'], ['copy']);
-}));
+gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync'));
+
+// Production build
+gulp.task('build', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'scripts', 'vendor', 'styles'], 'copy'));
