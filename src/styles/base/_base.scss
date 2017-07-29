@@ -30,9 +30,12 @@ body {
   font-size: 62.5%;
   color: $text-color;
   font-family: $text-font-stack;
-  border: 4px solid transparent;
-  border-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
-  border-image-slice: 1;
+
+  @include respond-to(medium) {
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
+    border-image-slice: 1;
+  }
 }
 
 a {

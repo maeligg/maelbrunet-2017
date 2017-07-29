@@ -100,7 +100,7 @@ gulp.task('imagemin', function() {
 // Build our final HTML from the templates (note this works even if there are no references to HTML partials included
 // on a page, in which case it will simply copy it to dist/
 gulp.task('fileinclude', () => {
-    gulp.src(['src/*.html'])
+    return gulp.src(['src/*.html'])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: 'src/html-partials'
@@ -110,7 +110,10 @@ gulp.task('fileinclude', () => {
 
 // Copy all other files we need into dist/
 gulp.task('copy', () => {
-
+  const files = ['src/*.png', 'src/browserconfig.xml', 'src/favicon.ico', 'src/manifest.json', 'src/safari-pinned-tab.svg'];
+  return gulp.src(files)
+      .pipe(plumber())
+      .pipe(gulp.dest('dist'));
 });
 
 // Cleans our dist/ directory to make sure it only includes the generated files

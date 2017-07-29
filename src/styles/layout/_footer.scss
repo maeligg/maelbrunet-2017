@@ -2,6 +2,7 @@ footer {
   position: absolute;
   bottom: -75px;
   width: calc(100% - 40px);
+  margin: 20px 0;
 
   @include respond-to(medium) {
     bottom: -85px;
