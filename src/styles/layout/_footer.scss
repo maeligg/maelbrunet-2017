@@ -1,16 +1,17 @@
 footer {
   position: absolute;
-  bottom: -75px;
+  bottom: -125px;
   width: calc(100% - 40px);
   margin: 20px 0;
 
   @include respond-to(medium) {
-    bottom: -85px;
+    bottom: -125px;
   }
 
   .social {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
   }
 
   .social-link {
@@ -60,6 +61,7 @@ footer {
 
     .social-icon {
       width: 100%;
+      fill: $blue;
       transition: all .3s ease-out;
     }
   }

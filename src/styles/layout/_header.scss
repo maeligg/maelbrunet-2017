@@ -131,7 +131,7 @@ nav {
 
     &.open {
       position: fixed;
-      right: 45px;
+      right: 20px;
 
       ~ .main-nav {
         display: block;
@@ -142,7 +142,7 @@ nav {
         height: 100%;
         width: calc(100% + 20px);
         margin-left: -20px;
-        padding: 180px 45px 0 0;
+        padding: 120px 20px 0 0;
         text-align: right;
         background-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
         animation: none;
