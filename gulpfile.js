@@ -90,7 +90,7 @@ gulp.task('svgSymbols', () => {
 
 // Minify images
 gulp.task('imagemin', function() {
-    gulp.src(['src/images/**/*', '!src/images/icons/*'])
+    return gulp.src(['src/images/**/*', '!src/images/icons/*'])
     // Prevents pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
         .pipe(imagemin())
@@ -122,16 +122,17 @@ gulp.task('clean', () => {
         .pipe(clean());
 });
 
-// Watches
-gulp.watch('src/styles/**/*.scss', ['styles']);
-gulp.watch('src/**/*.html', ['fileinclude']);
-gulp.watch('src/scripts/main.js', ['scripts']);
-gulp.watch('src/scripts/vendor/**/*.js', ['vendor']);
-gulp.watch('src/images/icons/*.svg', ['svgSymbols']);
-gulp.watch(['src/images/**/*', '!src/images/icons/*'], ['imagemin']);
+gulp.task('watch', function() {
+  gulp.watch('src/styles/**/*.scss', ['styles']);
+  gulp.watch('src/**/*.html', ['fileinclude']);
+  gulp.watch('src/scripts/main.js', ['scripts']);
+  gulp.watch('src/scripts/vendor/**/*.js', ['vendor']);
+  gulp.watch('src/images/icons/*.svg', ['svgSymbols']);
+  gulp.watch(['src/images/**/*', '!src/images/icons/*'], ['imagemin']);
+});
 
 // Development build
-gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync'));
+gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync', 'watch'));
 
 // Production build
 gulp.task('build', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy'));
