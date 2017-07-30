@@ -17,6 +17,7 @@ nav {
     flex-shrink: 0;
     padding: 18px;
     border-radius: 50%;
+    border: none;
     background-color: #fff;
     transition: all .3s;
 
@@ -224,6 +225,7 @@ nav {
       }
 
       a {
+        border: none;
         color: $text-color;
         text-decoration: none;
         text-transform: uppercase;

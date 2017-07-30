@@ -40,12 +40,13 @@ body {
 
 a {
   color: $link-color;
-  text-decoration: underline dashed $link-color;
+  text-decoration: none;
+  border-bottom: 1px dashed $link-color;
 
   @include on-event {
     color: $link-color;
-    text-decoration: underline;
     font-weight: bold;
+    border-bottom: 1px solid $link-color;
   }
 }
 
@@ -56,6 +57,10 @@ h1 {
 h2 {
   margin-top: 4rem;
   font-size: 1.5rem;
+}
+
+p, label, li, input {
+  font-size: 1rem;
 }
 
 abbr {
