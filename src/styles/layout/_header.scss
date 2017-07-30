@@ -203,7 +203,7 @@ nav {
           left: 180px;
         }
         &:nth-child(3) ~ .line {
-          left: 390px;
+          left: 370px;
         }
       }
 
@@ -215,7 +215,7 @@ nav {
           left: 180px;
         }
         &:nth-child(3) ~ .line {
-          left: 390px;
+          left: 370px;
         }
 
         a {
@@ -239,7 +239,7 @@ nav {
     .line {
       opacity: 0;
       position: absolute;
-      left: -160px;
+      left: -157px;
       bottom: -10px;
       transition: 0.7s ease-out;
       width: 110px;
