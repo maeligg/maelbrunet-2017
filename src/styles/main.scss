@@ -18,7 +18,8 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/print';
 
 // 5. Components
 @import
@@ -29,4 +30,5 @@
   'pages/home',
   'pages/about',
   'pages/contact',
-  'pages/projects';
+  'pages/projects',
+  'pages/resume';

@@ -1,0 +1,44 @@
+.resume {
+  .notice {
+    font-style: italic;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  .summary {
+    margin-bottom: 2rem;
+  }
+
+  .work-xp, .education {
+    padding: 0;
+
+    @include respond-to(small) {
+      display: table;
+
+      .meta, .description {
+        display: table-cell;
+      }
+    }
+
+    > li {
+      margin-bottom: 2rem;
+      list-style: none;
+    }
+
+    .org {
+      width: 150px;
+      font-weight: bold;
+    }
+
+    .year {
+      font-size: .9rem;
+      font-style: italic;
+    }
+
+    .description {
+      padding-left: 2rem;
+    }
+  }
+}

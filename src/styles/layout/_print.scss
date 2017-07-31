@@ -1,0 +1,9 @@
+@media print {
+  body {
+    border: none !important;
+  }
+
+  .main-nav, .menu-toggle, footer {
+    display: none !important;
+  }
+}
