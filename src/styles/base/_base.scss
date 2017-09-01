@@ -39,13 +39,14 @@ body {
 }
 
 a {
+  display: inline;
   color: $link-color;
   text-decoration: none;
   border-bottom: 1px dashed $link-color;
 
   @include on-event {
-    color: $link-color;
-    border-bottom: 1px solid $link-color;
+    color: $blue;
+    border-bottom: 1px solid currentColor;
   }
 }
 

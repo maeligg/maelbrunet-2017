@@ -220,7 +220,7 @@ nav {
         }
 
         a {
-          color: $link-color;
+          color: $blue;
         }
       }
 
@@ -231,7 +231,7 @@ nav {
         text-transform: uppercase;
         
         @include on-event {
-          color: $link-color;
+          color: $blue;
           text-decoration: none;
           font-weight: normal;
         }
