@@ -45,7 +45,6 @@ a {
 
   @include on-event {
     color: $link-color;
-    font-weight: bold;
     border-bottom: 1px solid $link-color;
   }
 }
