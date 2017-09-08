@@ -30,8 +30,6 @@
       display: flex;
       flex-direction: column;
       flex: 0 0 100%;
-      display: flex;
-      flex-direction: column;
       min-height: 130px;
       margin: 1rem 0;
       list-style: none;
@@ -39,16 +37,19 @@
 
       @include respond-to(small) {
         flex: 0 0 calc(100% / 2 - 1rem);
+        flex-basis: calc(100% / 2 - 1rem); // for IE11
         margin: .5rem;
       }
 
       @include respond-to(medium) {
         flex: 0 0 calc(100% / 3 - 2rem);
+        flex-basis: calc(100% / 3 - 2rem); // for IE11
         margin: 1rem;
       }
 
       @include respond-to(large) {
-        flex: 0 0 calc(100% / 4 - 2rem);
+        flex: 0 0 calc((100% / 4) - 2rem);
+        flex-basis: calc(100% / 4 - 2rem); // for IE11
       }
 
       .text {
@@ -57,7 +58,6 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        //height: calc(100% - 40px);
         padding: 20px;
         border: 2px solid $green;
         word-break: break-word;
