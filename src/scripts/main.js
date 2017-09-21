@@ -84,7 +84,7 @@ const toggleMenu = () => {
 const consoleGreet = () => {
   console.log('%c%s',
     'color: #11af60; font-style: italic;',
-    'Why, hello there! If you\'re looking for the sources of this site, they\'re all available at https://github.com/maeligg/maelbrunet');
+    'Why, hello there ! If you\'re looking for the sources of this site, they\'re available at https://github.com/maeligg/maelbrunet . Hope you enjoy your stay !');
 };
 
 
