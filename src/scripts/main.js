@@ -18,6 +18,7 @@ const checkDOM = () => {
 
 // Page transition using barba.js
 const pageTransition = () => {
+  Barba.Prefetch.init(); // Prefetch page when mouseover/touchstart
   document.querySelector('.barba-container').classList.add('visible');
 
   const FadeTransition = Barba.BaseTransition.extend({
