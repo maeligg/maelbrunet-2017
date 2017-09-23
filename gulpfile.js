@@ -110,7 +110,7 @@ gulp.task('fileinclude', () => {
 
 // Copy all other files we need into dist/
 gulp.task('copy', () => {
-  const files = ['src/*.png', 'src/browserconfig.xml', 'src/favicon.ico', 'src/manifest.json', 'src/safari-pinned-tab.svg', '_headers'];
+  const files = ['src/*.png', 'src/browserconfig.xml', 'src/favicon.ico', 'src/manifest.json', 'src/safari-pinned-tab.svg', 'src/_headers'];
   return gulp.src(files)
       .pipe(plumber())
       .pipe(gulp.dest('dist'));
