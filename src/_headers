@@ -11,4 +11,4 @@
     # Disable plugins like Flash or Silverlight
     # Load images, scripts, stylesheets and fonts from self
     # Send reports to report-uri.io
-    Content-Security-Policy: default-src 'none'; object-src 'none'; img-src 'self' https://www.google-analytics.com https://*.cloudfront.net; script-src 'self' https://www.google-analytics.com https://*.cloudfront.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; report-uri  https://4ad764e41edf42aa7c5ebe2837e78651.report-uri.io/r/default/csp/enforce;
+    Content-Security-Policy: default-src 'none'; object-src 'none'; img-src 'self' https://www.google-analytics.com https://*.cloudfront.net https://www.cornify.com; script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://*.cloudfront.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; report-uri  https://4ad764e41edf42aa7c5ebe2837e78651.report-uri.io/r/default/csp/enforce;
