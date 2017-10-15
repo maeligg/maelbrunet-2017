@@ -29,9 +29,10 @@
     li {
       display: flex;
       flex-direction: column;
-      flex: 0 0 100%;
+      flex: 0 0 calc(100% / 2 - 1rem);
+      flex-basis: calc(100% / 2 - 1rem); // for IE11
       min-height: 130px;
-      margin: 1rem 0;
+      margin: .5rem;
       list-style: none;
       text-align: center;
 
@@ -58,7 +59,8 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 20px;
+        margin-top: 0;
+        padding: 10px;
         border: 2px solid $green;
         word-break: break-word;
         hyphens: auto;
