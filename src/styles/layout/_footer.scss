@@ -1,17 +1,16 @@
 footer {
   position: absolute;
-  bottom: -125px;
+  bottom: -60px;
   width: calc(100% - 40px);
   margin: 20px 0;
 
   @include respond-to(medium) {
-    bottom: -125px;
+    bottom: -105px;
   }
 
   .social {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
   }
 
   .social-link {
