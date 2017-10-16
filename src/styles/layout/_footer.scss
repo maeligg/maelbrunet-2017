@@ -1,23 +1,27 @@
 footer {
   position: absolute;
-  bottom: -60px;
+  bottom: -50px;
   width: calc(100% - 40px);
   margin: 20px 0;
 
   @include respond-to(medium) {
-    bottom: -105px;
+    bottom: -85px;
   }
 
   .social {
     display: flex;
     justify-content: center;
+
+    @include respond-to(medium) {
+      margin-bottom: 10px;
+    }
   }
 
   .social-link {
     position: relative;
     height: 60px;
     width: 60px;
-    margin: 10px;
+    margin: 0 5px;
     padding: 15px;
     border-radius: 50%;
     border: 4px solid $green;
@@ -28,6 +32,7 @@ footer {
     @include respond-to(medium) {
       height: 80px;
       width: 80px;
+      margin: 0 10px;
       padding: 20px;
     }
 
@@ -68,7 +73,6 @@ footer {
 
   .copyright {
     display: none;
-    min-height: 35px;
     text-align: center;
 
     @include respond-to(medium) {

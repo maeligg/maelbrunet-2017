@@ -22,7 +22,7 @@ html {
 body {
   position: relative;
   min-width: calc(100vw - 40px);
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   padding: 20px 20px 60px;
@@ -32,7 +32,7 @@ body {
   border-bottom: 4px solid $green;
 
   @include respond-to(medium) {
-    min-height: calc(100vh - 125px);
+    min-height: calc(100vh - 105px);
     margin: 20px;
     border: 4px solid transparent;
     border-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
