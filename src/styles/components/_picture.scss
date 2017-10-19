@@ -1,0 +1,12 @@
+.me {
+  display: block;
+  width: 11rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 4px solid $blue;
+
+  @include respond-to(small) {
+    float: right;
+    margin: 0 0 2rem 2rem;
+  }
+}

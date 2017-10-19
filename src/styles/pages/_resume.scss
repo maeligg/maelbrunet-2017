@@ -1,13 +1,25 @@
 .resume {
-  .notice {
+  .notice-web, .notice-print {
     font-style: italic;
+  }
+
+  .notice-print {
+    display: none;
   }
 
   h2 {
     margin-top: 2rem;
   }
 
+  .me, .contact-info {
+    display: none;
+  }
+
   .summary {
+    margin-bottom: 2rem;
+  }
+
+  .languages {
     margin-bottom: 2rem;
   }
 

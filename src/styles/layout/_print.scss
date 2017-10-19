@@ -1,9 +1,15 @@
 @media print {
   body {
+    margin: 0 !important;
+    padding: 0 !important;
     border: none !important;
   }
 
-  header, .main-nav, .notice, footer {
+  header, .main-nav, .notice-web, footer {
     display: none !important;
+  }
+
+  .me, .contact-info, .notice-print {
+    display: block !important;
   }
 }
