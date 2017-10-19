@@ -20,23 +20,28 @@
   }
 
   .languages {
-    margin-bottom: 2rem;
+    @include respond-to(small) {
+      float: right;
+      margin: 2rem 0 0 2rem;
+      padding: 20px;
+      background-color: $light-grey;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
   }
 
   .work-xp, .education {
     padding: 0;
 
-    @include respond-to(small) {
-      display: table;
-
-      .meta, .description {
-        display: table-cell;
-      }
-    }
-
     > li {
       margin-bottom: 2rem;
       list-style: none;
+
+      @include respond-to(medium) {
+        display: flex;
+      }
     }
 
     .org {

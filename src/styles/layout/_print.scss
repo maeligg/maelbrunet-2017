@@ -1,5 +1,6 @@
 @media print {
   body {
+    display: block !important;
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
@@ -11,5 +12,9 @@
 
   .me, .contact-info, .notice-print {
     display: block !important;
+  }
+
+  .languages {
+    border: 1px solid #000 !important;
   }
 }
