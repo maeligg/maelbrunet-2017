@@ -11,7 +11,6 @@ const eslint = require('gulp-eslint');
 const clean = require('gulp-clean');
 const gulpSequence = require('gulp-sequence');
 const svgSymbols = require('gulp-svg-symbols');
-const fileinclude = require('gulp-file-include');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 
@@ -46,14 +45,14 @@ gulp.task('scripts', () => {
         .pipe(uglify())
         // Catch errors
         .on('error', gutil.log)
-        .pipe(gulp.dest('dist/scripts'))
+        .pipe(gulp.dest('site/static/scripts'))
 });
 
 // Concat vendor scripts
 gulp.task('vendor', function() {
   return gulp.src('src/scripts/vendor/**/*.js')
     .pipe(concat('vendors.js'))
-    .pipe(gulp.dest('dist/scripts'))
+    .pipe(gulp.dest('site/static/scripts'))
 });
 
 // Compile the SCSS files
@@ -76,7 +75,7 @@ gulp.task('styles', () => {
         .on('error', gutil.log)
         // Get our sources via sourceMaps
         .pipe(sourceMaps.write())
-        .pipe(gulp.dest('dist/styles'))
+        .pipe(gulp.dest('site/static/styles'))
 });
 
 // SVG icons
@@ -85,7 +84,7 @@ gulp.task('svgSymbols', () => {
     return gulp
         .src('src/images/icons/*.svg')
         .pipe(svgSymbols())
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('site/static/images'));
 });
 
 // Minify images
@@ -94,37 +93,17 @@ gulp.task('imagemin', function() {
     // Prevents pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
-});
-
-// Build our final HTML from the templates (note this works even if there are no references to HTML partials included
-// on a page, in which case it will simply copy it to dist/
-gulp.task('fileinclude', () => {
-    return gulp.src(['src/*.html'])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: 'src/html-partials'
-        }))
-        .pipe(gulp.dest('dist'))
-});
-
-// Copy all other files we need into dist/
-gulp.task('copy', () => {
-  const files = ['src/*.png', 'src/browserconfig.xml', 'src/favicon.ico', 'src/manifest.json', 'src/safari-pinned-tab.svg', 'src/_headers', 'src/robots.txt'];
-  return gulp.src(files)
-      .pipe(plumber())
-      .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('site/static/images'))
 });
 
 // Cleans our dist/ directory to make sure it only includes the generated files
 gulp.task('clean', () => {
-    return gulp.src('dist/', {read: false})
+    return gulp.src('site/static/', {read: false})
         .pipe(clean());
 });
 
 gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.scss', ['styles']);
-  gulp.watch('src/**/*.html', ['fileinclude']);
   gulp.watch('src/scripts/main.js', ['scripts']);
   gulp.watch('src/scripts/vendor/**/*.js', ['vendor']);
   gulp.watch('src/images/icons/*.svg', ['svgSymbols']);
@@ -132,7 +111,7 @@ gulp.task('watch', function() {
 });
 
 // Development build
-gulp.task('default', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy', 'browserSync', 'watch'));
+gulp.task('default', gulpSequence('clean', ['svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'browserSync', 'watch'));
 
 // Production build
-gulp.task('build', gulpSequence('clean', ['fileinclude', 'svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'copy'));
+gulp.task('build', gulpSequence('clean', ['svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles']));
