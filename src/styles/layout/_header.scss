@@ -115,7 +115,7 @@ nav {
     @include on-event() {
       background-color: transparent;
     }
-    
+
     &.open {
       position: fixed;
       right: 20px;
@@ -187,7 +187,6 @@ nav {
     height: 100%;
     margin: 0 0 0 20px;
     padding: 0;
-    animation: fade-in-right 1s ease-out;
 
     @include respond-to(medium) {
       display: flex;
@@ -237,7 +236,7 @@ nav {
         color: $text-color;
         text-decoration: none;
         text-transform: uppercase;
-        
+
         @include on-event {
           color: $blue;
           text-decoration: none;
