@@ -23,5 +23,8 @@
     "gulp-svg-symbols": "^2.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.6"
+  },
+  "scripts": {
+    "build" : "gulp build && cd site && hugo"
   }
 }
