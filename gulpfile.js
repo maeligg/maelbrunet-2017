@@ -4,7 +4,6 @@ const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const sourceMaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
-const browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
 const eslint = require('gulp-eslint');
@@ -13,19 +12,6 @@ const gulpSequence = require('gulp-sequence');
 const svgSymbols = require('gulp-svg-symbols');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
-
-// Local server
-gulp.task('browserSync', () => {
-    browserSync({
-        server: {
-            baseDir: "dist/"
-        },
-        options: {
-            reloadDelay: 250
-        },
-        notify: false
-    });
-});
 
 // Lint, transpile and minify authored scripts
 gulp.task('scripts', () => {
@@ -111,7 +97,7 @@ gulp.task('watch', function() {
 });
 
 // Development build
-gulp.task('default', gulpSequence('clean', ['svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'browserSync', 'watch'));
+gulp.task('default', gulpSequence('clean', ['svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles'], 'watch'));
 
 // Production build
 gulp.task('build', gulpSequence('clean', ['svgSymbols', 'imagemin', 'scripts', 'vendor', 'styles']));
