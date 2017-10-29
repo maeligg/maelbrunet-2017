@@ -82,9 +82,9 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('site/static/images'))
 });
 
-// Cleans our dist/ directory to make sure it only includes the generated files
+// Cleans our output directory of previously generated assets
 gulp.task('clean', () => {
-    return gulp.src('site/static/', {read: false})
+    return gulp.src(['site/static/images', 'site/static/scripts', 'site/static/styles'], {read: false})
         .pipe(clean());
 });
 
