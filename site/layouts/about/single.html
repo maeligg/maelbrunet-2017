@@ -1,15 +1,17 @@
-{{ partial "head.html" . }}
+{{ partial "head" . }}
 
-{{ partial "nav.html" . }}
+{{ partial "nav" . }}
 
 <div id="barba-wrapper">
     <main class="barba-container about">
         <div class="container">
-            <img src="images/mael.jpg" alt="Maël Brunet" class="me">
+            <img src="{{ .Site.BaseURL }}images/mael.jpg" alt="Maël Brunet" class="me">
+
             <h1>About</h1>
             <p>I'm a self-taught french (front-end) web developer and UI designer living in Brussels, Belgium and currently working for
                 <a href="https://www.emakina.be/" target="_blank">Emakina</a>, a digital agency.</p>
             <p>I code mostly on the client-side, designing accessible and beautiful interfaces with HTML & CSS, and programming awesome experiences with JavaScript.</p>
+
             <h2>Things I<span> ❤ </span>️(and I like to think I'm pretty good at)</h2>
             <ul class="❤">
                 <li>
@@ -34,28 +36,28 @@
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#speedometer"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#speedometer"></use>
                     </svg>
                     <p class="text">Lightweight, performant websites</p>
                 </li>
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#a11y"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#a11y"></use>
                     </svg>
                     <p class="text">Accessibility — the web is for everyone</p>
                 </li>
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#smartphone"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#smartphone"></use>
                     </svg>
                     <p class="text">Beautiful, clearly understandable UI</p>
                 </li>
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#react"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#react"></use>
                     </svg>
                     <p class="text"><span>The right framework for the right job (<a href="https://facebook.github.io/react/" target="_blank">React</a> <em>is</em> pretty cool though)</span></p>
                 </li>
@@ -72,28 +74,28 @@
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#eye"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#eye"></use>
                     </svg>
                     <p class="text">Attention to detail : it's the little things that matter</p>
                 </li>
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#team"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#team"></use>
                     </svg>
                     <p class="text">Code reviews, discussing and sharing best practices</p>
                 </li>
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#wrench"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#wrench"></use>
                     </svg>
                     <p class="text">Using the right tools for the perfect build process</p>
                 </li>
 
                 <li>
                     <svg class="icon">
-                        <use xlink:href="images/svg-symbols.svg#styleguide"></use>
+                        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#styleguide"></use>
                     </svg>
                     <p class="text">Styleguide and design systems to build consistent UI at scale</p>
                 </li>
@@ -118,4 +120,4 @@
     </main>
 </div>
 
-{{ partial "footer.html" . }}
+{{ partial "footer" . }}

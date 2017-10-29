@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Maël Brunet, web developer & designer</title>
+    <title>{{ .Site.Title}}</title>
     <meta name="description" content="The personal website of Maël Brunet, front-end developer & UI designer based in Brussels, Belgium.">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -24,7 +24,7 @@
       ga('send', 'pageview');
     </script>
 
-    <link rel="stylesheet" rel="preload" href="styles/main.css">
+    <link rel="stylesheet" rel="preload" href="{{ .Site.BaseURL }}styles/main.css">
     <noscript>
         <style>
             .barba-container {
