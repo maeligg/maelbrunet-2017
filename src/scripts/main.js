@@ -76,6 +76,8 @@ const unicorns = () => {
 // eslint-disable-next-line
 const unicorn = () => {
   cornify_add();
+  // eslint-disable-next-line
+  console.log('Well, this is pretty childish.');
 };
 
 

@@ -112,7 +112,15 @@ nav {
       display: none;
     }
 
-    &.open, &:hover {
+    @include on-event() {
+      background-color: transparent;
+    }
+
+    &.open {
+      position: fixed;
+      right: 20px;
+      fill: #fff;
+
       .top-bun {
         transform: translateY(-10px);
       }
@@ -128,11 +136,10 @@ nav {
       .bottom-bun {
         transform: translateY(10px);
       }
-    }
 
-    &.open {
-      position: fixed;
-      right: 20px;
+      .menu-text {
+        color: #fff;
+      }
 
       ~ .main-nav {
         display: block;
@@ -149,6 +156,7 @@ nav {
         animation: none;
 
         a {
+          color: #fff;
           @include on-event {
             color: $text-color;
           }
@@ -160,8 +168,8 @@ nav {
       height: 60px;
       width: 60px;
 
-      g, path {
-        transition: all .3s ease-out;
+      .top-bun, .salad, .burger, .bottom-bun {
+        transition: transform .3s ease-out;
       }
     }
 
@@ -179,7 +187,6 @@ nav {
     height: 100%;
     margin: 0 0 0 20px;
     padding: 0;
-    animation: fade-in-right 1s ease-out;
 
     @include respond-to(medium) {
       display: flex;
@@ -229,7 +236,7 @@ nav {
         color: $text-color;
         text-decoration: none;
         text-transform: uppercase;
-        
+
         @include on-event {
           color: $blue;
           text-decoration: none;
