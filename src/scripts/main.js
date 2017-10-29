@@ -139,6 +139,7 @@ window.onload = () => {
   consoleGreet();
 };
 
+
 window.addEventListener('resize', () => {
   const menu = document.querySelector('.menu-toggle');
 
