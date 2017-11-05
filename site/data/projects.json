@@ -4,7 +4,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "js-lib-generator.png",
-    "description": "A Twitter bot that comes up with imaginary JavaScript library. Built with Node.js and hosted on Heroku.",
+    "description": "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
     "url": "https://twitter.com/JSLibGenerator",
     "code": "https://github.com/maeligg/JSLibGenerator"
   },
@@ -21,7 +21,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "facho-bot.jpg",
-    "description": "A Twitter bot that replies with nonsensical racist slur to random press articles. Built with Node.js and hosted on Heroku. Tweets in French.",
+    "description": "A Twitter bot built in Node.js that replies with nonsensical racist slur to random press articles. Tweets in French.",
     "url": "https://twitter.com/facho_bot",
     "code": "https://github.com/maeligg/facho-bot"
   },
