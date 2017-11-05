@@ -238,7 +238,6 @@ nav {
         text-transform: uppercase;
 
         @include on-event {
-          color: $blue;
           text-decoration: none;
           font-weight: normal;
         }
