@@ -1,0 +1,44 @@
+[
+  {
+    "name": "JavaScript Library Generator",
+    "publicationYear": "2017",
+    "category": "bot",
+    "thumbnail": "js-lib-generator.png",
+    "description": "A Twitter bot that comes up with imaginary JavaScript library. Built with Node.js and hosted on Heroku.",
+    "url": "https://twitter.com/JSLibGenerator",
+    "code": "https://github.com/maeligg/JSLibGenerator"
+  },
+  {
+    "name": "Patchs littéraires",
+    "publicationYear": "2017",
+    "category": "bot",
+    "thumbnail": "patchs-littéraires.png",
+    "description": "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
+    "url": "https://twitter.com/patchslitt"
+  },
+  {
+    "name": "Facho bot",
+    "publicationYear": "2017",
+    "category": "bot",
+    "thumbnail": "facho-bot.jpg",
+    "description": "A Twitter bot that replies with nonsensical racist slur to random press articles. Built with Node.js and hosted on Heroku. Tweets in French.",
+    "url": "https://twitter.com/facho_bot",
+    "code": "https://github.com/maeligg/facho-bot"
+  },
+  {
+    "name": "The future of CSS",
+    "publicationYear": "2017",
+    "category": "presentation",
+    "thumbnail": "future-css.jpg",
+    "description": "A presentation about the new and upcoming CSS specifications.",
+    "url": "http://slides.com/maelig/the-future-of-css"
+  },
+  {
+    "name": "In search of the ideal icon system",
+    "publicationYear": "2017",
+    "category": "presentation",
+    "thumbnail": "icon-system.jpg",
+    "description": "A presentation about best practices for using icons on the web.",
+    "url": "http://slides.com/maelig/in-search-of-the-ideal-icon-system"
+  }
+]

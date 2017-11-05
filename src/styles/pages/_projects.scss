@@ -1,45 +1,58 @@
 .projects {
-  text-align: center;
-  
-  h1 {
-    text-align: left;  
-  }
-  
-  .bricks {
-    height: 30vh;
-    fill: $blue;
+  h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
 
-    path {
-      opacity: 0;
-      animation: fade-in .5s ease-out forwards;
-
-      &:nth-of-type(2) {
-        animation-delay: .5s;
-      }
-
-      &:nth-of-type(3) {
-        animation-delay: 1s;
-      }
-
-      &:nth-of-type(4) {
-        animation-delay: 1.5s;
-      }
-
-      &:nth-of-type(5) {
-        animation-delay: 2s;
-      }
-
-      &:nth-of-type(6) {
-        animation-delay: 2.5s;
-      }
-
-      &:nth-of-type(7) {
-        animation-delay: 3s;
-      }
+    .icon{
+      height: 80px;
+      width: 80px;
+      fill: $blue;
     }
   }
 
-  h2 {
-    margin-top: 2rem;
+  .project-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .project-item {
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid $green;
+
+    @include respond-to(medium) {
+      width: calc(50% - 40px);
+    }
+
+    .project-inner-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .project-link {
+      flex-grow: 1;
+      border: none;
+    }
+
+    .year {
+      padding: 5px;
+      background-color: $green;
+      color: #fff;
+    }
+
+    .thumbnail {
+      float: left;
+      height: 80px;
+      margin: 0 20px 20px 0;
+    }
+
+    .year {
+      float: right;
+    }
   }
 }
