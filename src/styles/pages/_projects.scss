@@ -36,23 +36,33 @@
 
     .project-link {
       flex-grow: 1;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       border: none;
+
+      @include respond-to(medium) {
+        flex-wrap: nowrap;
+      }
+
+      h3 {
+        margin: 0;
+      }
     }
 
     .year {
+      float: right;
+      margin-left: 20px;
       padding: 5px;
+      font-size: 1rem;
       background-color: $green;
       color: #fff;
     }
 
     .thumbnail {
       float: left;
-      height: 80px;
       margin: 0 20px 20px 0;
-    }
-
-    .year {
-      float: right;
+      height: 80px;
     }
   }
 }

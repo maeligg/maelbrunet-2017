@@ -7,7 +7,8 @@
         <div class="container">
             <h1>Projects</h1>
 
-            <p>This is where I collect side projects and things I made outside of work.</p>
+            <p>This is where I collect side projects and things I made outside of work. (Some of) my professional projects are listed in my
+              <a href="{{ .Site.BaseURL }}resume">resume</a>.</p>
 
             <h2>
                 <svg class="icon">
@@ -17,6 +18,18 @@
             </h2>
             <div class="project-list">
                 {{ range where .Site.Data.projects "category" "bot" }}
+                    {{ partial "project.html" . }}
+                {{ end }}
+            </div>
+
+            <h2>
+                <svg class="icon">
+                    <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#website"></use>
+                </svg>
+                Websites
+            </h2>
+            <div class="project-list">
+                {{ range where .Site.Data.projects "category" "website" }}
                     {{ partial "project.html" . }}
                 {{ end }}
             </div>
