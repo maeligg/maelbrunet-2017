@@ -71,11 +71,13 @@ nav {
 
       .first-letter {
         stroke: $blue;
+        fill: $blue;
         animation: dash 2s linear forwards, fill-blue 1s 1.5s linear forwards;
       }
 
       .second-letter {
         stroke: $green;
+        fill: $green;
         animation: dash 3s linear forwards, fill-green 1s 1.5s linear forwards;
       }
 
@@ -92,8 +94,12 @@ nav {
       }
 
       @keyframes dash {
+        from {
+          fill: transparent;
+        }
         to {
           stroke-dashoffset: 0;
+          fill: transparent;
         }
       }
     }

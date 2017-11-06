@@ -34,7 +34,7 @@ body {
   @include respond-to(medium) {
     min-height: calc(100vh - 105px);
     margin: 20px;
-    border: 4px solid transparent;
+    border: 4px solid $green;
     border-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
     border-image-slice: 1;
   }
