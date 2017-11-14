@@ -35,20 +35,20 @@
     "code": "https://github.com/maeligg/facho-bot"
   },
   {
-    "name": "The future of CSS",
-    "publicationYear": "2017",
-    "category": "presentation",
-    "thumbnail": "future-css.jpg",
-    "description": "A presentation about the new and upcoming CSS specifications.",
-    "url": "http://slides.com/maelig/the-future-of-css"
-  },
-  {
     "name": "In search of the ideal icon system",
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "icon-system.png",
     "description": "A presentation about best practices for using icons on the web.",
     "url": "http://slides.com/maelig/in-search-of-the-ideal-icon-system"
+  },
+  {
+    "name": "The future of CSS",
+    "publicationYear": "2017",
+    "category": "presentation",
+    "thumbnail": "future-css.jpg",
+    "description": "A presentation about the new and upcoming CSS specifications.",
+    "url": "http://slides.com/maelig/the-future-of-css"
   },
   {
     "name": "Français MOFO",
@@ -58,5 +58,13 @@
     "description": "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations.",
     "url": "https://twitter.com/francais_mofo",
     "code": "https://github.com/maeligg/francais-mofo"
+  },
+  {
+    "name": "An introduction to design systems",
+    "publicationYear": "2017",
+    "category": "presentation",
+    "thumbnail": "design-systems.svg",
+    "description": "A presentation about design systems, style guides and pattern libraries.",
+    "url": "https://slides.com/maelig/design-systems"
   }
 ]
