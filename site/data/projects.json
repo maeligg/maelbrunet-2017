@@ -4,7 +4,8 @@
     "publicationYear": "2015",
     "category": "website",
     "thumbnail": "fix-my-documents.png",
-    "description": "A static site in support of a campaign to encourage European public administrations to use and support open document formats.",
+    "description":
+      "A static site in support of a campaign to encourage European public administrations to use and support open document formats.",
     "url": "http://fixmydocuments.eu/",
     "code": "https://github.com/maeligg/fixmydocuments-static"
   },
@@ -13,7 +14,8 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "js-lib-generator.png",
-    "description": "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
+    "description":
+      "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
     "url": "https://twitter.com/JSLibGenerator",
     "code": "https://github.com/maeligg/JSLibGenerator"
   },
@@ -22,7 +24,8 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "patchs-litteraires.jpg",
-    "description": "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
+    "description":
+      "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
     "url": "https://twitter.com/patchslitt"
   },
   {
@@ -30,7 +33,8 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "facho-bot.jpg",
-    "description": "A Twitter bot built in Node.js that replies with nonsensical racist slur to random press articles. Tweets in French.",
+    "description":
+      "A Twitter bot built in Node.js that replies with nonsensical racist slur to random press articles. Tweets in French.",
     "url": "https://twitter.com/facho_bot",
     "code": "https://github.com/maeligg/facho-bot"
   },
@@ -39,7 +43,8 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "icon-system.png",
-    "description": "A presentation about best practices for using icons on the web.",
+    "description":
+      "A presentation about best practices for using icons on the web.",
     "url": "http://slides.com/maelig/in-search-of-the-ideal-icon-system"
   },
   {
@@ -47,7 +52,8 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "future-css.jpg",
-    "description": "A presentation about the new and upcoming CSS specifications.",
+    "description":
+      "A presentation about the new and upcoming CSS specifications.",
     "url": "http://slides.com/maelig/the-future-of-css"
   },
   {
@@ -55,7 +61,8 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "francais-mofo.jpg",
-    "description": "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations.",
+    "description":
+      "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations.",
     "url": "https://twitter.com/francais_mofo",
     "code": "https://github.com/maeligg/francais-mofo"
   },
@@ -64,7 +71,17 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "design-systems.svg",
-    "description": "A presentation about design systems, style guides and pattern libraries.",
+    "description":
+      "A presentation about design systems, style guides and pattern libraries.",
     "url": "https://slides.com/maelig/design-systems"
+  },
+  {
+    "name": "The Guardian 1959",
+    "publicationYear": "2018",
+    "category": "website",
+    "thumbnail": "guardian-1959.png",
+    "description":
+      "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959",
+    "url": "https://trusting-hypatia-359407.netlify.com/"
   }
 ]
