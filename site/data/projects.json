@@ -82,7 +82,7 @@
     "thumbnail": "guardian-1959.png",
     "description":
       "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
-    "url": "https://trusting-hypatia-359407.netlify.com/",
+    "url": "https://guardian1959.netlify.com/",
     "code": "https://github.com/maeligg/guardian-1959"
   }
 ]
