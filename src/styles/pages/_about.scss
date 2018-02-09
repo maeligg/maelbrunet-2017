@@ -80,6 +80,11 @@
       font-weight: bold;
       fill: $blue;
       color: $blue;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .html {
