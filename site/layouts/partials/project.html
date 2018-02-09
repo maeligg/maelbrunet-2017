@@ -1,7 +1,7 @@
 {{ $image_name := split .thumbnail "." }}
 {{ $image_alt := index $image_name 0 }}
 
-<div class="project-item">
+<li class="project-item">
   <div class="project-inner-wrapper">
     <a href="{{ .url }}" target="_blank" class="project-link">
       <img src="{{ .Site.BaseURL }}/images/project-thumbnails/{{ .thumbnail }}" alt="{{ $image_alt }}" class="thumbnail">
@@ -13,4 +13,4 @@
   {{ if .code }}
       <p><a href="{{ .code }}" target="_blank">Source code</a></p>
   {{ end }}
-</div>
+</li>

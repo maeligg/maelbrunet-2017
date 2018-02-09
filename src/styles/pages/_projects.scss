@@ -2,7 +2,7 @@
   h2 {
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin: 4rem 0 0;
     text-transform: uppercase;
 
     .icon{
@@ -16,6 +16,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 2rem;
+    }
   }
 
   .project-item {
@@ -26,6 +35,11 @@
 
     @include respond-to(medium) {
       width: calc(50% - 40px);
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+      margin: 0;
     }
 
     .project-inner-wrapper {

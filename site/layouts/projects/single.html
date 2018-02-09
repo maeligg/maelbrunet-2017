@@ -16,11 +16,11 @@
                 </svg>
                 Bots
             </h2>
-            <div class="project-list">
+            <ul class="project-list">
                 {{ range where .Site.Data.projects "category" "bot" }}
                     {{ partial "project.html" . }}
                 {{ end }}
-            </div>
+            </ul>
 
             <h2>
                 <svg class="icon">
@@ -28,11 +28,11 @@
                 </svg>
                 Websites
             </h2>
-            <div class="project-list">
+            <ul class="project-list">
                 {{ range where .Site.Data.projects "category" "website" }}
                     {{ partial "project.html" . }}
                 {{ end }}
-            </div>
+            </ul>
 
             <h2>
                 <svg class="icon">
@@ -40,11 +40,11 @@
                 </svg>
                 Presentations
             </h2>
-            <div class="project-list">
+            <ul class="project-list">
                 {{ range where .Site.Data.projects "category" "presentation" }}
                     {{ partial "project.html" . }}
                 {{ end }}
-            </div>
+            </ul>
         </div>
     </main>
 </div>
