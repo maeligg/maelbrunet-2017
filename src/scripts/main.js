@@ -94,37 +94,8 @@ const toggleMenu = () => {
 const consoleGreet = () => {
   // eslint-disable-next-line
   console.log('%c%s',
-    'color: #808080',
-    '                   .,,uod8B8bou,,.\n' +
-    '              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.\n' +
-    '         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||\n' +
-    '         !...:!TVBBBRPFT||||||||||!!^^""\'   ||||\n' +
-    '         !.......:!?|||||!!^^""\'            ||||\n' +
-    '         !.........||||                     ||||\n' +
-    '         !.........||||  Did you know ?     ||||\n' +
-    '         !.........||||                     ||||\n' +
-    '         !.........||||  You can also call  ||||\n' +
-    '         !.........||||  unicorn()          ||||\n' +
-    '         !.........||||  straight from the  ||||\n' +
-    '         `.........||||  console. 🦄       ,||||\n' +
-    '          .;.......||||               _.-!!|||||\n' +
-    '   .,uodWBBBBb.....||||       _.-!!|||||||||!:\'\n' +
-    '!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb.... \n' +
-    '!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   `.\n' +
-    '!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     `.\n' +
-    '!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::       `.  \n' +
-    '!........YBBBBBBBBBBRPFT?!::::::::::^\'\'...::::::;         iBBbo.\n' +
-    '`..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.\n' +
-    '  `..........:::::::::::::::::::::::;iof688888888888b.     `YBBBP^\'\n' +
-    '    `........::::::::::::::::;iof688888888888888888888b.     `\n' +
-    '      `......:::::::::;iof688888888888888888888888888888b.\n' +
-    '        `....:::;iof688888888888888888888888888888888899fT!  \n' +
-    '          `..::!8888888888888888888888888888888899fT|!^"\'   \n' +
-    '            `\' !!988888888888888888888888899fT|!^"\' \n' +
-    '                `!!8888888888888888899fT|!^"\'\n' +
-    '                  `!988888888899fT|!^"\'\n' +
-    '                    `!9899fT|!^"\'\n' +
-    '                      `!^"\'');
+  'color: #11af60; font-style: italic;',
+  'Why, hello there ! If you\'re looking for the source code of this site, it\'s available at https://github.com/maeligg/maelbrunet . Hope you enjoy your stay !');
 };
 
 
