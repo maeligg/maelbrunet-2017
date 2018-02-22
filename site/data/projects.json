@@ -84,5 +84,15 @@
       "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
     "url": "https://guardian1959.netlify.com/",
     "code": "https://github.com/maeligg/guardian-1959"
+  },
+  {
+    "name": "Historical snaps",
+    "publicationYear": "2018",
+    "category": "website",
+    "thumbnail": "historical-snaps.png",
+    "description":
+      "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
+    "url": "https://historical-snaps.netlify.com",
+    "code": "https://historical-snaps.netlify.com"
   }
 ]
