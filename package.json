@@ -25,6 +25,6 @@
     "gulp-util": "^3.0.6"
   },
   "scripts": {
-    "build" : "gulp build && cd site && hugo"
+    "build": "gulp build && cd site && hugo"
   }
 }
