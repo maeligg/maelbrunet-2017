@@ -1,44 +1,174 @@
-{{ partial "head" . }}
-
-{{ partial "nav" . }}
+{{ partial "head" . }} {{ partial "nav" . }}
 
 <div id="barba-wrapper">
-    <main class="barba-container about">
-        <div class="container">
-            <img src="{{ .Site.BaseURL }}images/mael.jpg" alt="Maël Brunet" class="me">
+  <main class="barba-container about">
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1024" height="1024" class="me">
+        <title>Maël Brunet</title>
+        <rect x="0" y="0" width="1024" height="1024" fill="#6c6c6c" />
+        <g transform="scale(4.000000) translate(0.5 0.5)">
+          <polygon fill="#c2c2c2" fill-opacity="0.501961" points="257,9 255,271 87,141" />
+          <polygon fill="#080808" fill-opacity="0.501961" points="157,-9 67,174 -16,2" />
+          <polygon fill="#ececec" fill-opacity="0.501961" points="184,55 100,49 152,118" />
+          <polygon fill="#cdcdcd" fill-opacity="0.501961" points="126,252 254,271 271,146" />
+          <polygon fill="#000000" fill-opacity="0.501961" points="85,20 206,66 165,10" />
+          <polygon fill="#2d2d2d" fill-opacity="0.501961" points="143,108 51,271 150,228" />
+          <polygon fill="#000000" fill-opacity="0.501961" points="89,225 50,80 90,24" />
+          <polygon fill="#535353" fill-opacity="0.501961" points="79,-6 -16,50 9,271" />
+          <polygon fill="#aaaaaa" fill-opacity="0.501961" points="191,112 268,250 117,203" />
+          <polygon fill="#4b4b4b" fill-opacity="0.501961" points="77,93 174,126 217,102" />
+          <polygon fill="#959595" fill-opacity="0.501961" points="85,103 100,48 178,45" />
+          <polygon fill="#000000" fill-opacity="0.501961" points="185,25 91,15 55,68" />
+          <polygon fill="#6e6e6e" fill-opacity="0.501961" points="271,15 191,10 199,135" />
+          <polygon fill="#d3d3d3" fill-opacity="0.501961" points="149,146 213,169 138,91" />
+          <polygon fill="#484848" fill-opacity="0.501961" points="79,136 146,115 86,65" />
+          <polygon fill="#1f1f1f" fill-opacity="0.501961" points="122,170 166,167 139,145" />
+          <polygon fill="#272727" fill-opacity="0.501961" points="141,229 81,151 81,232" />
+          <polygon fill="#cdcdcd" fill-opacity="0.501961" points="172,48 201,97 102,91" />
+          <polygon fill="#090909" fill-opacity="0.501961" points="182,46 204,96 199,63" />
+          <polygon fill="#9c9c9c" fill-opacity="0.501961" points="81,120 132,136 108,182" />
+          <polygon fill="#5a5a5a" fill-opacity="0.501961" points="44,271 58,55 -16,52" />
+          <polygon fill="#252525" fill-opacity="0.501961" points="147,205 163,192 126,190" />
+          <polygon fill="#0e0e0e" fill-opacity="0.501961" points="148,230 170,221 110,215" />
+          <polygon fill="#050505" fill-opacity="0.501961" points="99,15 163,15 199,61" />
+          <polygon fill="#5d5d5d" fill-opacity="0.501961" points="170,19 271,-16 83,-3" />
+          <polygon fill="#575757" fill-opacity="0.501961" points="134,39 87,56 79,96" />
+          <polygon fill="#a7a7a7" fill-opacity="0.501961" points="256,214 256,112 137,214" />
+          <polygon fill="#000000" fill-opacity="0.501961" points="70,129 56,80 86,19" />
+          <polygon fill="#d0d0d0" fill-opacity="0.501961" points="200,168 195,120 161,162" />
+          <polygon fill="#b9b9b9" fill-opacity="0.501961" points="115,271 271,249 168,227" />
+          <polygon fill="#666666" fill-opacity="0.501961" points="83,133 99,200 147,217" />
+          <polygon fill="#2f2f2f" fill-opacity="0.501961" points="75,91 134,97 110,128" />
+          <polygon fill="#3e3e3e" fill-opacity="0.501961" points="-2,0 64,-16 -2,134" />
+          <polygon fill="#727272" fill-opacity="0.501961" points="159,148 181,179 132,178" />
+          <polygon fill="#898989" fill-opacity="0.501961" points="268,25 256,91 155,139" />
+          <polygon fill="#b8b8b8" fill-opacity="0.501961" points="151,135 170,50 120,46" />
+          <polygon fill="#4a4a4a" fill-opacity="0.501961" points="163,98 166,129 190,98" />
+          <polygon fill="#777777" fill-opacity="0.501961" points="208,59 271,9 166,17" />
+          <polygon fill="#656565" fill-opacity="0.501961" points="46,271 54,65 -16,248" />
+          <polygon fill="#525252" fill-opacity="0.501961" points="67,28 160,0 85,-16" />
+          <polygon fill="#5d5d5d" fill-opacity="0.501961" points="152,270 128,239 47,249" />
+          <polygon fill="#010101" fill-opacity="0.501961" points="91,19 76,68 146,10" />
+          <polygon fill="#8a8a8a" fill-opacity="0.501961" points="154,44 122,42 93,96" />
+          <polygon fill="#9b9b9b" fill-opacity="0.501961" points="249,125 211,75 174,267" />
+          <polygon fill="#bfbfbf" fill-opacity="0.501961" points="197,80 178,53 160,102" />
+          <polygon fill="#707070" fill-opacity="0.501961" points="126,112 91,105 115,100" />
+          <polygon fill="#3d3d3d" fill-opacity="0.501961" points="206,89 201,113 199,83" />
+          <polygon fill="#343434" fill-opacity="0.501961" points="203,77 164,42 189,34" />
+          <polygon fill="#2c2c2c" fill-opacity="0.501961" points="52,114 54,164 102,173" />
+          <polygon fill="#797979" fill-opacity="0.501961" points="136,184 138,214 109,179" />
+          <polygon fill="#373737" fill-opacity="0.501961" points="132,218 163,228 169,215" />
+          <polygon fill="#9c9c9c" fill-opacity="0.501961" points="166,114 195,109 176,107" />
+          <polygon fill="#262626" fill-opacity="0.501961" points="122,94 101,97 143,114" />
+          <polygon fill="#c5c5c5" fill-opacity="0.501961" points="166,166 153,116 194,169" />
+          <polygon fill="#6c6c6c" fill-opacity="0.501961" points="137,98 149,104 124,138" />
+          <polygon fill="#292929" fill-opacity="0.501961" points="152,203 134,192 157,198" />
+          <polygon fill="#6c6c6c" fill-opacity="0.501961" points="81,226 66,152 49,271" />
+          <polygon fill="#636363" fill-opacity="0.501961" points="82,122 101,101 89,157" />
+          <polygon fill="#747474" fill-opacity="0.501961" points="117,91 114,48 95,95" />
+          <polygon fill="#2e2e2e" fill-opacity="0.501961" points="139,161 123,183 109,173" />
+          <polygon fill="#000000" fill-opacity="0.501961" points="81,57 56,68 62,122" />
+          <polygon fill="#646464" fill-opacity="0.501961" points="-7,270 41,76 68,229" />
+          <polygon fill="#1e1e1e" fill-opacity="0.501961" points="81,177 50,125 84,120" />
+          <polygon fill="#b3b3b3" fill-opacity="0.501961" points="153,208 199,148 175,212" />
+          <polygon fill="#a6a6a6" fill-opacity="0.501961" points="271,114 200,271 165,225" />
+          <polygon fill="#595959" fill-opacity="0.501961" points="114,8 182,19 190,-16" />
+          <polygon fill="#141414" fill-opacity="0.501961" points="100,111 118,115 100,122" />
+          <polygon fill="#858585" fill-opacity="0.501961" points="271,51 195,39 206,104" />
+          <polygon fill="#343434" fill-opacity="0.501961" points="128,157 126,147 164,152" />
+          <polygon fill="#999999" fill-opacity="0.501961" points="126,162 123,109 101,167" />
+          <polygon fill="#6a6a6a" fill-opacity="0.501961" points="104,246 80,271 90,226" />
+          <polygon fill="#353535" fill-opacity="0.501961" points="86,165 78,246 119,197" />
+          <polygon fill="#c2c2c2" fill-opacity="0.501961" points="184,58 184,98 123,57" />
+          <polygon fill="#a9a9a9" fill-opacity="0.501961" points="135,172 152,167 174,176" />
+          <polygon fill="#c2c2c2" fill-opacity="0.501961" points="151,264 172,271 173,219" />
+          <polygon fill="#878787" fill-opacity="0.501961" points="148,131 144,114 143,143" />
+          <polygon fill="#9f9f9f" fill-opacity="0.501961" points="136,99 109,79 128,51" />
+          <polygon fill="#414141" fill-opacity="0.501961" points="199,127 199,100 205,107" />
+          <polygon fill="#525252" fill-opacity="0.501961" points="26,40 81,23 -16,179" />
+          <polygon fill="#9e9e9e" fill-opacity="0.501961" points="132,243 175,219 138,257" />
+          <polygon fill="#636363" fill-opacity="0.501961" points="59,121 51,78 43,111" />
+          <polygon fill="#505050" fill-opacity="0.501961" points="176,246 181,256 177,265" />
+          <polygon fill="#bababa" fill-opacity="0.501961" points="149,157 148,105 168,131" />
+          <polygon fill="#c8c8c8" fill-opacity="0.501961" points="203,153 143,143 191,130" />
+          <polygon fill="#a3a3a3" fill-opacity="0.501961" points="189,127 199,140 198,95" />
+          <polygon fill="#b6b6b6" fill-opacity="0.501961" points="140,180 172,198 175,183" />
+          <polygon fill="#080808" fill-opacity="0.501961" points="154,16 189,38 76,35" />
+          <polygon fill="#919191" fill-opacity="0.501961" points="252,91 201,138 204,83" />
+          <polygon fill="#494949" fill-opacity="0.501961" points="112,258 84,224 140,228" />
+          <polygon fill="#878787" fill-opacity="0.501961" points="92,128 135,135 134,117" />
+          <polygon fill="#030303" fill-opacity="0.501961" points="73,52 56,103 75,149" />
+          <polygon fill="#363636" fill-opacity="0.501961" points="157,105 189,105 176,99" />
+          <polygon fill="#969696" fill-opacity="0.501961" points="149,217 126,201 154,205" />
+          <polygon fill="#7f7f7f" fill-opacity="0.501961" points="154,106 163,99 165,131" />
+          <polygon fill="#5c5c5c" fill-opacity="0.501961" points="168,170 146,147 148,167" />
+          <polygon fill="#505050" fill-opacity="0.501961" points="100,204 81,140 131,213" />
+          <polygon fill="#4e4e4e" fill-opacity="0.501961" points="178,114 195,122 160,119" />
+          <polygon fill="#676767" fill-opacity="0.501961" points="116,209 133,211 144,165" />
+          <polygon fill="#8a8a8a" fill-opacity="0.501961" points="176,62 186,61 166,45" />
+          <polygon fill="#3d3d3d" fill-opacity="0.501961" points="52,134 73,149 62,173" />
+        </g>
+      </svg>
 
-            <div class="intro">
-              <h1>About</h1>
-              <p>I'm a self-taught french (front-end) web developer and UI designer living in Brussels, Belgium. I code mostly on the client-side, designing accessible and beautiful interfaces with HTML & CSS, and programming awesome experiences with JavaScript.</p>
-            </div>
+      <div class="intro">
+        <h1>About</h1>
+        <p>I'm a self-taught french (front-end) web developer and UI designer living in Brussels, Belgium. I code mostly on
+          the client-side, designing accessible and beautiful interfaces with HTML & CSS, and programming awesome experiences
+          with JavaScript.</p>
+      </div>
 
-            <h2>Things I<span> ❤ </span>️(and I like to think I'm pretty good at)</h2>
-            <ul class="❤">
-                {{ partial "skill" (dict "icon" "&lt/&gt" "iconClass" "html" "text" "Clean, semantic HTML markup") }}
-                {{ partial "skill" (dict "icon" "{ }" "text" "Responsive, well scoped CSS") }}
-                {{ partial "skill" (dict "icon" "( )" "text" "Modular, composable JavaScript") }}
-                {{ partial "skill" (dict "icon" "//" "text" "Well commented, maintainable code") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#speedometer'></use></svg>" "text" "Lightweight, performant websites") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#a11y'></use></svg>" "text" "Accessibility — the web is for everyone") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#smartphone'></use></svg>" "text" "Beautiful, clearly understandable UI") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#react'></use></svg>" "text" "<span>The right framework for the right job (<a href='https://facebook.github.io/react/' target='_blank'>React</a> <em>is</em> pretty cool though)</span>") }}
-                {{ partial "skill" (dict "iconClass" "animation" "text" "Meaningful and playful animations") }}
-                {{ partial "skill" (dict "icon" "<abbr title='Scalable Vector Graphics'>SVG</abbr>" "iconClass" "svg" "text" "Perfect for icons, logos, animations") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#eye'></use></svg>" "text" "Attention to detail : it's the little things that matter") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#team'></use></svg>" "text" "Code reviews, discussing and sharing best practices") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#wrench'></use></svg>" "text" "Using the right tools for the perfect build process") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#styleguide'></use></svg>" "text" "Styleguide and design systems to build consistent UI at scale") }}
-                {{ partial "skill" (dict "icon" "<abbr title='Keep It Simple, Stupid'>KISS</abbr>" "iconClass" "kiss" "text" "Avoid unnecessary complexity.") }}
-                {{ partial "skill" (dict "icon" "<abbr title='JavaScript, APIs and Markup'>JAMstack</abbr>" "iconClass" "jam" "text" "The <span><a href='https://jamstack.org/' target='_blank'>JAMstack</a> is my jam.</span>") }}
-            </ul>
+      <h2>Things I
+        <span> ❤ </span>️(and I like to think I'm pretty good at)</h2>
+      <ul class="❤">
+        {{ partial "skill" (dict "icon" "&lt/&gt" "iconClass" "html" "text" "Clean, semantic HTML markup") }} {{ partial "skill"
+        (dict "icon" "{ }" "text" "Responsive, well scoped CSS") }} {{ partial "skill" (dict "icon" "( )" "text" "Modular,
+        composable JavaScript") }} {{ partial "skill" (dict "icon" "//" "text" "Well commented, maintainable code") }} {{
+        partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#speedometer'></use>
+        </svg>" "text" "Lightweight, performant websites") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#a11y'></use>
+        </svg>" "text" "Accessibility — the web is for everyone") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#smartphone'></use>
+        </svg>" "text" "Beautiful, clearly understandable UI") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#react'></use>
+        </svg>" "text" "
+        <span>The right framework for the right job (
+          <a href='https://facebook.github.io/react/' target='_blank'>React</a>
+          <em>is</em> pretty cool though)</span>") }} {{ partial "skill" (dict "iconClass" "animation" "text" "Meaningful and
+        playful animations") }} {{ partial "skill" (dict "icon" "
+        <abbr title='Scalable Vector Graphics'>SVG</abbr>" "iconClass" "svg" "text" "Perfect for icons, logos, animations") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#eye'></use>
+        </svg>" "text" "Attention to detail : it's the little things that matter") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#team'></use>
+        </svg>" "text" "Code reviews, discussing and sharing best practices") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#wrench'></use>
+        </svg>" "text" "Using the right tools for the perfect build process") }} {{ partial "skill" (dict "icon" "
+        <svg>
+          <use xlink:href='/images/svg-symbols.svg#styleguide'></use>
+        </svg>" "text" "Styleguide and design systems to build consistent UI at scale") }} {{ partial "skill" (dict "icon" "
+        <abbr title='Keep It Simple, Stupid'>KISS</abbr>" "iconClass" "kiss" "text" "Avoid unnecessary complexity.") }} {{ partial "skill" (dict "icon" "
+        <abbr title='JavaScript, APIs and Markup'>JAMstack</abbr>" "iconClass" "jam" "text" "The
+        <span>
+          <a href='https://jamstack.org/' target='_blank'>JAMstack</a> is my jam.</span>") }}
+      </ul>
 
-            <h2>Outside of web development</h2>
-            <p>I love hiking and running, especially out in the woods.</p>
-            <p>Food is very important to me, I enjoy every part of the process : picking the right ingredients, cooking (I'm not big on cakes, but I like making just about anything else), and sharing a meal in good company. I find the whole process very similar to web development in some aspects.</p>
-            <p>I play video games (though not as much as I used to), mostly on PC, and I have a particular fondness for rich narrative experiences and emergent stories.</p>
-            <p>Other than that, I enjoy spending time with friends, preferably over a nice, cool beer 🍺.</p>
-          </div>
-    </main>
+      <h2>Outside of web development</h2>
+      <p>I love hiking and running, especially out in the woods.</p>
+      <p>Food is very important to me, I enjoy every part of the process : picking the right ingredients, cooking (I'm not big
+        on cakes, but I like making just about anything else), and sharing a meal in good company. I find the whole process
+        very similar to web development in some aspects.</p>
+      <p>I play video games (though not as much as I used to), mostly on PC, and I have a particular fondness for rich narrative
+        experiences and emergent stories.</p>
+      <p>Other than that, I enjoy spending time with friends, preferably over a nice, cool beer 🍺.</p>
+    </div>
+  </main>
 </div>
 
 {{ partial "footer" . }}
