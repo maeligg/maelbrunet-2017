@@ -1,15 +1,5 @@
 [
   {
-    "name": "Fix My Documents",
-    "publicationYear": "2015",
-    "category": "website",
-    "thumbnail": "fix-my-documents.png",
-    "description":
-      "A static site in support of a campaign to encourage European public administrations to use and support open document formats.",
-    "url": "http://fixmydocuments.eu/",
-    "code": "https://github.com/maeligg/fixmydocuments-static"
-  },
-  {
     "name": "JavaScript Library Generator",
     "publicationYear": "2017",
     "category": "bot",
