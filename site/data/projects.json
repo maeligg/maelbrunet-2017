@@ -43,8 +43,7 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "icon-system.png",
-    "description":
-      "A presentation about best practices for using icons on the web.",
+    "description": "A presentation about best practices for using icons on the web.",
     "url": "http://slides.com/maelig/in-search-of-the-ideal-icon-system"
   },
   {
@@ -52,8 +51,7 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "future-css.jpg",
-    "description":
-      "A presentation about the new and upcoming CSS specifications.",
+    "description": "A presentation about the new and upcoming CSS specifications.",
     "url": "http://slides.com/maelig/the-future-of-css"
   },
   {
@@ -62,7 +60,7 @@
     "category": "bot",
     "thumbnail": "francais-mofo.jpg",
     "description":
-      "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations.",
+      "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations. Tweets in French.",
     "url": "https://twitter.com/francais_mofo",
     "code": "https://github.com/maeligg/francais-mofo"
   },
@@ -71,8 +69,7 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "design-systems.svg",
-    "description":
-      "A presentation about design systems, style guides and pattern libraries.",
+    "description": "A presentation about design systems, style guides and pattern libraries.",
     "url": "https://slides.com/maelig/design-systems"
   },
   {
@@ -94,5 +91,14 @@
       "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
     "url": "https://historical-snaps.netlify.com",
     "code": "https://historical-snaps.netlify.com"
+  },
+  {
+    "name": "The price of things",
+    "publicationYear": "2018",
+    "category": "bot",
+    "thumbnail": "price-of-things.png",
+    "description": "A Twitter bot built in Node.js that compares the price of random things.",
+    "url": "https://twitter.com/relativeprices",
+    "code": "https://github.com/maeligg/relative-prices-bot"
   }
 ]
