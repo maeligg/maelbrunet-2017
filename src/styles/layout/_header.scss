@@ -28,8 +28,6 @@ nav {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      opacity: 0;
-      animation: fade-in 1s 1.5s linear forwards;
       transition: all 0.3s ease-out;
     }
 
@@ -66,44 +64,14 @@ nav {
       stroke-width: 2px;
       transition: all 0.3s;
 
-      .first-letter,
-      .second-letter {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-      }
-
       .first-letter {
         stroke: $blue;
         fill: $blue;
-        animation: dash 2s linear forwards, fill-blue 1s 1.5s linear forwards;
       }
 
       .second-letter {
         stroke: $green;
         fill: $green;
-        animation: dash 3s linear forwards, fill-green 1s 1.5s linear forwards;
-      }
-
-      @keyframes fill-blue {
-        to {
-          fill: $blue;
-        }
-      }
-
-      @keyframes fill-green {
-        to {
-          fill: $green;
-        }
-      }
-
-      @keyframes dash {
-        from {
-          fill: transparent;
-        }
-        to {
-          stroke-dashoffset: 0;
-          fill: transparent;
-        }
       }
     }
   }
