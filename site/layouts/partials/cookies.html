@@ -1,0 +1,19 @@
+<div class="cookies js-cookies is-hidden">
+  <button class="close-button js-cookies-agree">
+    <svg class="icon close-icon">
+        <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#cross"></use>
+      </svg>
+  </button>
+  <div class="js-cookies-inner">
+    <svg class="icon cookies-icon">
+      <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#cookies"></use>
+    </svg>
+    <p>There are no tracking scripts on this website, but did you know my favourite cookies are oatmeal chocolate chip cookies
+      ? They're the best.</p>
+    <button class="button-light js-cookies-agree">OK</button>
+    <button class="button-light js-cookies-disagree">I disagree !</button>
+  </div>
+  <div class="js-cookies-disagree-message is-hidden">
+    <p>I bet you're the kind of person who enjoys <em>raisins</em> in their cookies, too. 🤢</p>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.cookies {
+  position: fixed;
+  z-index: 200;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  max-width: calc(100% - 40px);
+  padding: 2rem;
+  background-color: $link-color;
+  color: #fff;
+  transition: opacity .3s ease-out;
+
+  .close-button {
+    float: right;
+    margin: 0 0 1rem 1rem;
+    padding: 0;
+    transition: transform .3s ease-out;
+    
+    @include on-event {
+      background-color: $link-color;
+      transform: rotate(15deg);
+    }
+  }
+
+  .close-icon {
+    fill: #fff;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .cookies-icon {
+    float: left;
+    margin: .5rem 1rem 0 0;
+    fill: #fff;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

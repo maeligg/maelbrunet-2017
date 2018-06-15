@@ -1,33 +1,43 @@
-{{ partial "head" . }}
-
-{{ partial "nav" . }}
+{{ partial "head" . }} {{ partial "nav" . }}
 
 <div id="barba-wrapper">
-    <main class="barba-container contact">
-        <div class="container">
-            <section class="animation">
-                <svg class="plane js-toggle-active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.062 60.062">
-                    <path d="M60.046 11.196c.004-.024.01-.048.013-.072.006-.074-.002-.15-.01-.224-.003-.02 0-.037-.003-.056-.018-.1-.05-.196-.1-.29-.008-.015-.02-.03-.028-.046-.003-.002-.003-.005-.004-.008 0-.002-.004-.003-.005-.006-.006-.01-.012-.023-.02-.033-.06-.09-.136-.165-.22-.23-.02-.013-.04-.02-.06-.034-.075-.05-.153-.09-.237-.116-.037-.012-.074-.018-.112-.025-.072-.015-.145-.022-.22-.02-.04 0-.08.003-.12.01-.025.003-.05 0-.076.005L.798 22.046c-.413.086-.73.42-.788.84s.15.827.523 1.024l16.632 8.773 2.917 16.187c-.002.012 0 .025 0 .037-.01.08-.01.158 0 .237.004.04.01.078.02.117.022.096.06.185.11.27.01.015.01.034.02.05.003.005.008.01.012.013.013.02.03.034.046.053.047.058.096.11.152.156.01.007.015.018.025.025.015.01.032.014.047.024.06.04.124.074.19.1.028.01.053.022.08.03.09.026.184.044.278.044h.003l.012-.002.05.002c.278 0 .528-.124.713-.315l11.08-7.387 11.6 7.54c.163.106.353.16.544.16.105 0 .212-.016.315-.05.287-.096.517-.318.622-.604l13.996-37.99c.013-.034.024-.07.033-.105.005-.015.006-.03.01-.044l.006-.034zM48.464 17.58L24.47 35.22c-.038.03-.07.065-.103.1-.013.01-.026.02-.037.034l-.06.07c-.017.025-.03.05-.047.075-.037.06-.068.12-.092.187-.004.013-.012.023-.016.036 0 .004-.005.006-.006.01l-2.75 8.937-2.18-12.09 29.286-15zM22.908 46.593l2.726-9.004 4.244 2.76 1.214.788-4.124 2.75-4.06 2.706zm29.136-33.096l-33.973 17.4-14.14-7.457L52.045 13.5zM44.56 47.504L29.153 37.492l-2.333-1.517 30.155-22.172-12.416 33.7z"/>
-                </svg>
-
-            </section>
-            <section class="form">
-                <h1>Get in touch</h1>
-                <form action="https://formspree.io/maelbrunet@gmail.com"
-                      method="POST">
-                    <label for="name">Your name : <abbr title="This field is required">*</abbr></label>
-                    <input type="text" name="name" id="name" required>
-                    <label for="email">Your email : <abbr title="This field is required">*</abbr></label>
-                    <input type="email" name="email" id="email" required>
-                    <label for="message">Your message : <abbr title="This field is required">*</abbr></label>
-                    <textarea name="message" id="message" cols="40" rows="8" required></textarea>
-                    <p class="required-message">All fields marked with <abbr title="This field is required">*</abbr> are required.</p>
-                    <div class="button"><input type="submit" value="Send"></div>
-                </form>
-                <p>Or feel free to drop me a line at maelbrunet<span class="highlight">[at]</span>gmail<span class="highlight">[dot]</span>com</p>
-            </section>
-        </div>
-    </main>
+  <main class="barba-container contact">
+    <div class="container">
+      <section class="animation">
+        <svg class="plane js-toggle-active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.062 60.062">
+          <path d="M60.046 11.196c.004-.024.01-.048.013-.072.006-.074-.002-.15-.01-.224-.003-.02 0-.037-.003-.056-.018-.1-.05-.196-.1-.29-.008-.015-.02-.03-.028-.046-.003-.002-.003-.005-.004-.008 0-.002-.004-.003-.005-.006-.006-.01-.012-.023-.02-.033-.06-.09-.136-.165-.22-.23-.02-.013-.04-.02-.06-.034-.075-.05-.153-.09-.237-.116-.037-.012-.074-.018-.112-.025-.072-.015-.145-.022-.22-.02-.04 0-.08.003-.12.01-.025.003-.05 0-.076.005L.798 22.046c-.413.086-.73.42-.788.84s.15.827.523 1.024l16.632 8.773 2.917 16.187c-.002.012 0 .025 0 .037-.01.08-.01.158 0 .237.004.04.01.078.02.117.022.096.06.185.11.27.01.015.01.034.02.05.003.005.008.01.012.013.013.02.03.034.046.053.047.058.096.11.152.156.01.007.015.018.025.025.015.01.032.014.047.024.06.04.124.074.19.1.028.01.053.022.08.03.09.026.184.044.278.044h.003l.012-.002.05.002c.278 0 .528-.124.713-.315l11.08-7.387 11.6 7.54c.163.106.353.16.544.16.105 0 .212-.016.315-.05.287-.096.517-.318.622-.604l13.996-37.99c.013-.034.024-.07.033-.105.005-.015.006-.03.01-.044l.006-.034zM48.464 17.58L24.47 35.22c-.038.03-.07.065-.103.1-.013.01-.026.02-.037.034l-.06.07c-.017.025-.03.05-.047.075-.037.06-.068.12-.092.187-.004.013-.012.023-.016.036 0 .004-.005.006-.006.01l-2.75 8.937-2.18-12.09 29.286-15zM22.908 46.593l2.726-9.004 4.244 2.76 1.214.788-4.124 2.75-4.06 2.706zm29.136-33.096l-33.973 17.4-14.14-7.457L52.045 13.5zM44.56 47.504L29.153 37.492l-2.333-1.517 30.155-22.172-12.416 33.7z"
+          />
+        </svg>
+      </section>
+      <section class="form">
+        <h1>Get in touch</h1>
+        <form action="https://formspree.io/maelbrunet@gmail.com" method="POST">
+          <label for="name">Your name :
+            <abbr title="This field is required">*</abbr>
+          </label>
+          <input type="text" name="name" id="name" required>
+          <label for="email">Your email :
+            <abbr title="This field is required">*</abbr>
+          </label>
+          <input type="email" name="email" id="email" required>
+          <label for="message">Your message :
+            <abbr title="This field is required">*</abbr>
+          </label>
+          <textarea name="message" id="message" cols="40" rows="8" required></textarea>
+          <p class="required-message">All fields marked with
+            <abbr title="This field is required">*</abbr> are required.</p>
+          <div class="button">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+        <p>Or feel free to drop me a line at maelbrunet
+          <span class="highlight">[at]</span>gmail
+          <span class="highlight">[dot]</span>com</p>
+      </section>
+    </div>
+  </main>
 </div>
+
+{{ partial "cookies" . }}
 
 {{ partial "footer" . }}

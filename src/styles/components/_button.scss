@@ -7,29 +7,24 @@ button, .button {
   color: #fff;
   cursor: pointer;
   overflow: hidden;
-
-  &::after {
-    content: "";
-    height: 155px;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    opacity: .5;
-    transform: rotate(-35deg);
-    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-    width: 50px;
-    background-color: #fff;
-    z-index: 10;
-  }
+  transition: background-color .3s ease-out;
 
   @include on-event {
     background-color: $blue;
+  }
 
-    &::after {
-      top: -100%;
-      left: 150%;
-      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  &.button-light {
+    background-color: #fff;
+    color: $link-color;
+
+    @include on-event {
+      background-color: $blue;
+      color: #fff;
     }
+  }
+
+  + button, + .button {
+    margin-left: 1rem;
   }
 
   input {

@@ -8,13 +8,11 @@ const toggleActive = () => {
   });
 };
 
-
 // Relaunch animation that need to check for specific DOM elements
 const checkDOM = () => {
   initTyping();
   toggleActive();
 };
-
 
 // Page transition using barba.js
 const pageTransition = () => {
@@ -98,6 +96,25 @@ const consoleGreet = () => {
   'Why, hello there ! If you\'re looking for the source code of this site, it\'s available at https://github.com/maeligg/maelbrunet . Hope you enjoy your stay !');
 };
 
+// Display the cookie notice if not in the sessionStorage
+const displayCookieNotice = () => {
+  const cookiesWindow = document.querySelector('.js-cookies');
+  if (!sessionStorage.getItem('cookies')) {
+    cookiesWindow.classList.remove('is-hidden');
+  }
+
+  document.querySelectorAll('.js-cookies-agree').forEach((e) => {
+    e.addEventListener('click', () => {
+      sessionStorage.setItem('cookies', 'true');
+      cookiesWindow.classList.add('is-hidden');
+    });
+  });
+
+  document.querySelector('.js-cookies-disagree').addEventListener('click', () => {
+    document.querySelector('.js-cookies-inner').classList.add('is-hidden');
+    document.querySelector('.js-cookies-disagree-message').classList.remove('is-hidden');
+  });
+};
 
 // Call functions
 window.onload = () => {
@@ -108,6 +125,7 @@ window.onload = () => {
   toggleMenu();
   unicorns();
   consoleGreet();
+  displayCookieNotice();
 };
 
 
