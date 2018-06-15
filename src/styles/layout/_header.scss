@@ -19,9 +19,10 @@ nav {
     border-radius: 50%;
     border: none;
     background-color: #fff;
-    transition: all .3s;
+    transition: all 0.3s;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -29,7 +30,7 @@ nav {
       border-radius: 50%;
       opacity: 0;
       animation: fade-in 1s 1.5s linear forwards;
-      transition: all .3s ease-out;
+      transition: all 0.3s ease-out;
     }
 
     &::before {
@@ -44,14 +45,15 @@ nav {
       border: 4px solid $blue;
     }
 
-    @include respond-to(medium){
+    @include respond-to(medium) {
       width: 120px;
       height: 120px;
       padding: 20px 20px 20px 30px;
     }
 
     @include on-event {
-      &::before, &::after {
+      &::before,
+      &::after {
         top: 0;
         left: 0;
       }
@@ -62,9 +64,10 @@ nav {
       width: 100%;
       fill: transparent;
       stroke-width: 2px;
-      transition: all .3s;
+      transition: all 0.3s;
 
-      .first-letter, .second-letter {
+      .first-letter,
+      .second-letter {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
       }
@@ -158,7 +161,11 @@ nav {
         margin-left: -20px;
         padding: 120px 20px 0 0;
         text-align: right;
-        background-image: linear-gradient(to bottom right, $blue 0%, $green 100%);
+        background-image: linear-gradient(
+          to bottom right,
+          $blue 0%,
+          $green 100%
+        );
         animation: none;
 
         a {
@@ -174,8 +181,11 @@ nav {
       height: 60px;
       width: 60px;
 
-      .top-bun, .salad, .burger, .bottom-bun {
-        transition: transform .3s ease-out;
+      .top-bun,
+      .salad,
+      .burger,
+      .bottom-bun {
+        transition: transform 0.3s ease-out;
       }
     }
 
@@ -209,31 +219,35 @@ nav {
       list-style: none;
       font-size: 2rem;
 
+      &.active {
+        ~ .line {
+          opacity: 1;
+        }
+
+        &:nth-child(1) ~ .line {
+          left: 20px;
+        }
+        &:nth-child(2) ~ .line {
+          left: 180px;
+        }
+        &:nth-child(3) ~ .line {
+          left: 370px;
+        }
+
+        a {
+          color: $blue;
+        }
+      }
+
       @include on-event {
         &:nth-child(1) ~ .line {
           left: 20px;
         }
         &:nth-child(2) ~ .line {
-          left: 200px;
+          left: 180px;
         }
         &:nth-child(3) ~ .line {
-          left: 390px;
-        }
-      }
-
-      &.active {
-        &:nth-child(1) ~ .line {
-          left: 20px;
-        }
-        &:nth-child(2) ~ .line {
-          left: 200px;
-        }
-        &:nth-child(3) ~ .line {
-          left: 390px;
-        }
-
-        a {
-          color: $blue;
+          left: 370px;
         }
       }
 
@@ -256,7 +270,7 @@ nav {
       position: absolute;
       left: -157px;
       bottom: 10px;
-      transition: .3s ease-out;
+      transition: 0.3s ease-out;
       width: 110px;
       height: 6px;
       background: $link-color;
