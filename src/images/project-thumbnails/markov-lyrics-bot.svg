@@ -1,0 +1,20 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="160" height="160" fill="white"/>
+<path d="M41.2384 18.6188C41.2384 28.9017 32.0069 37.2376 20.6192 37.2376C9.23153 37.2376 0 28.9017 0 18.6188C0 8.33593 9.23153 0 20.6192 0C32.0069 0 41.2384 8.33593 41.2384 18.6188Z" transform="translate(97.5715 99.0943) scale(0.907073 1.00453)" stroke="#0580F8" stroke-width="12"/>
+<path d="M41.2384 18.6188C41.2384 28.9017 32.0069 37.2376 20.6192 37.2376C9.23153 37.2376 0 28.9017 0 18.6188C0 8.33593 9.23153 0 20.6192 0C32.0069 0 41.2384 8.33593 41.2384 18.6188Z" transform="translate(26 30.1454) scale(0.907073 1.00453)" stroke="#585454" stroke-width="12"/>
+<path d="M0 23.2496C36.5587 -39.8578 88.7855 46.3164 19.1498 38.9176" transform="translate(49.7029 6)" stroke="#FE5205" stroke-width="10"/>
+<path d="M16.2001 16.7519L0 11.3074L12.8151 0L16.2001 16.7519Z" transform="translate(70.4348 33.7838) scale(1.00003 0.999882) rotate(8.40767)" fill="#FB5A07" stroke="#FE5205" stroke-width="10.0004"/>
+<path d="M50.0799 2.50646C-28.2602 -15.7729 -5.60444 73.6281 55.762 23.1422" transform="translate(43.7571 112.205)" stroke="#FE5205" stroke-width="10"/>
+<path d="M16.2001 16.7519L0 11.3074L12.8151 0L16.2001 16.7519Z" transform="matrix(0.74057 0.631429 -0.674196 0.775357 90.1183 127.002)" fill="#FB5A07" stroke="#FE5205" stroke-width="10.0004"/>
+<path d="M42.1514 40.4214C-3.7646 33.6754 -0.153581 0.28135 0.206804 0" transform="translate(53.9607 69.7525)" stroke="#FE5205" stroke-width="10"/>
+<path d="M16.2001 16.7519L0 11.3074L12.8151 0L16.2001 16.7519Z" transform="translate(41.8663 74.2783) scale(1.00002 0.999897) rotate(-20.4401)" fill="#FB5A07" stroke="#FE5205" stroke-width="10.0004"/>
+<path d="M0 0C45.916 6.74596 39.0276 41.0587 38.6672 41.3401" transform="translate(65.3712 56.2334)" stroke="#FE5205" stroke-width="10"/>
+<path d="M16.2001 16.7519L0 11.3074L12.8151 0L16.2001 16.7519Z" transform="translate(103.417 74.6172) rotate(41.7145)" fill="#FB5A07" stroke="#FE5205" stroke-width="10.0004"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="160" height="160" fill="white"/>
+</clipPath>
+</defs>
+</svg>

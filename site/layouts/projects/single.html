@@ -7,10 +7,15 @@
         <div class="container">
             <h1>Projects</h1>
 
-            <p>This is where I collect side projects and things I made outside of work. (Some of) my professional projects are listed in my
-              <a href="{{ .Site.BaseURL }}resume">resume</a>.</p>
+            <p>I enjoy making Stuff™ on the web :</p>
+            <ul>
+                <li><a href="#bots">Bots</a></li>
+                <li><a href="#websites">Websistes and web apps</a></li>
+                <li><a href="#presentations">Presentations</a></li>
+            </ul>
+            <p>For work-related things, have a look at my <a href="{{ .Site.BaseURL }}resume">resume</a>.</p>
 
-            <h2>
+            <h2 id="bots">
                 <svg class="icon">
                     <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#bot"></use>
                 </svg>
@@ -22,7 +27,7 @@
                 {{ end }}
             </ul>
 
-            <h2>
+            <h2 id="websites">
                 <svg class="icon">
                     <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#website"></use>
                 </svg>
@@ -34,7 +39,7 @@
                 {{ end }}
             </ul>
 
-            <h2>
+            <h2 id="presentations">
                 <svg class="icon">
                     <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#presentation"></use>
                 </svg>

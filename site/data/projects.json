@@ -1,22 +1,41 @@
 [
   {
-    "name": "JavaScript Library Generator",
-    "publicationYear": "2017",
+    "name": "Markov Lyrics bot",
+    "publicationYear": "2018",
     "category": "bot",
-    "thumbnail": "js-lib-generator.png",
-    "description":
-      "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
-    "url": "https://twitter.com/JSLibGenerator",
-    "code": "https://github.com/maeligg/JSLibGenerator"
+    "thumbnail": "markov-lyrics-bot.svg",
+    "description": "A Node.js script to retrieve and parse lyrics from an artist using the Genius.com API, and tweet new lyrics generated from Markov chains.",
+    "url": "https://twitter.com/BotB2o",
+    "code": "https://github.com/maeligg/markov-lyrics-bot"
   },
   {
-    "name": "Patchs littéraires",
-    "publicationYear": "2017",
+    "name": "The price of things",
+    "publicationYear": "2018",
     "category": "bot",
-    "thumbnail": "patchs-litteraires.jpg",
+    "thumbnail": "price-of-things.png",
+    "description": "A Twitter bot built in Node.js that compares the price of random things.",
+    "url": "https://twitter.com/relativeprices",
+    "code": "https://github.com/maeligg/relative-prices-bot"
+  },
+  {
+    "name": "Historical snaps",
+    "publicationYear": "2018",
+    "category": "website",
+    "thumbnail": "historical-snaps.png",
     "description":
-      "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
-    "url": "https://twitter.com/patchslitt"
+      "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
+    "url": "https://historical-snaps.netlify.com",
+    "code": "https://historical-snaps.netlify.com"
+  },
+  {
+    "name": "The Guardian 1959",
+    "publicationYear": "2018",
+    "category": "website",
+    "thumbnail": "guardian-1959.png",
+    "description":
+      "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
+    "url": "https://guardian1959.netlify.com/",
+    "code": "https://github.com/maeligg/guardian-1959"
   },
   {
     "name": "Facho bot",
@@ -63,32 +82,22 @@
     "url": "https://slides.com/maelig/design-systems"
   },
   {
-    "name": "The Guardian 1959",
-    "publicationYear": "2018",
-    "category": "website",
-    "thumbnail": "guardian-1959.png",
-    "description":
-      "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
-    "url": "https://guardian1959.netlify.com/",
-    "code": "https://github.com/maeligg/guardian-1959"
-  },
-  {
-    "name": "Historical snaps",
-    "publicationYear": "2018",
-    "category": "website",
-    "thumbnail": "historical-snaps.png",
-    "description":
-      "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
-    "url": "https://historical-snaps.netlify.com",
-    "code": "https://historical-snaps.netlify.com"
-  },
-  {
-    "name": "The price of things",
-    "publicationYear": "2018",
+    "name": "Patchs littéraires",
+    "publicationYear": "2017",
     "category": "bot",
-    "thumbnail": "price-of-things.png",
-    "description": "A Twitter bot built in Node.js that compares the price of random things.",
-    "url": "https://twitter.com/relativeprices",
-    "code": "https://github.com/maeligg/relative-prices-bot"
+    "thumbnail": "patchs-litteraires.jpg",
+    "description":
+      "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
+    "url": "https://twitter.com/patchslitt"
+  },
+  {
+    "name": "JavaScript Library Generator",
+    "publicationYear": "2017",
+    "category": "bot",
+    "thumbnail": "js-lib-generator.png",
+    "description":
+      "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
+    "url": "https://twitter.com/JSLibGenerator",
+    "code": "https://github.com/maeligg/JSLibGenerator"
   }
 ]
