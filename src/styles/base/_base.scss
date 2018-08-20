@@ -3,6 +3,7 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /**
@@ -11,7 +12,9 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -52,8 +55,14 @@ a {
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
+  margin-top: 0;
 }
 
 h1 {
@@ -68,9 +77,18 @@ h3 {
   font-size: 1.5rem;
 }
 
-p, label, li, input, button {
+p,
+label,
+li,
+input,
+textarea,
+button {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 abbr {

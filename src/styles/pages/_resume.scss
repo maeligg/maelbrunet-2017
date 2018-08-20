@@ -1,5 +1,6 @@
 .resume {
-  .notice-web, .notice-print {
+  .notice-web,
+  .notice-print {
     font-style: italic;
   }
 
@@ -11,7 +12,8 @@
     margin-top: 2rem;
   }
 
-  .me, .contact-info {
+  .me,
+  .contact-info {
     display: none;
   }
 
@@ -20,7 +22,7 @@
   }
 
   .languages {
-    @include respond-to(small) {
+    @include respond-to(medium) {
       float: right;
       margin: 2rem 0 0 2rem;
       padding: 20px;
@@ -32,7 +34,8 @@
     }
   }
 
-  .work-xp, .education {
+  .work-xp,
+  .education {
     padding: 0;
 
     > li {
@@ -50,7 +53,7 @@
     }
 
     .year {
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-style: italic;
     }
 

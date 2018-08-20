@@ -2,10 +2,9 @@
   h2 {
     display: flex;
     align-items: center;
-    margin: 4rem 0 0;
     text-transform: uppercase;
 
-    .icon{
+    .icon {
       height: 80px;
       width: 80px;
       fill: $blue;
@@ -16,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 0 2rem;
+    margin: 0 0 4rem;
     padding: 0;
     list-style: none;
 

@@ -7,48 +7,51 @@
         <div class="container">
             <h1>Projects</h1>
 
-            <p>Here are some non-work-related projects I enjoyed creating :</p>
-            <ul>
-                <li><a href="#bots">Bots</a></li>
-                <li><a href="#websites">Websistes and web apps</a></li>
-                <li><a href="#presentations">Presentations</a></li>
-            </ul>
+            <section>
+              <ul>
+                  <li><a href="#bots">Bots</a></li>
+                  <li><a href="#websites">Websites and web apps</a></li>
+                  <li><a href="#presentations">Presentations</a></li>
+              </ul>
+            </section>
 
-            <h2 id="bots">
+            <section>
+              <h2 id="bots">
                 <svg class="icon">
                     <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#bot"></use>
                 </svg>
                 Bots
-            </h2>
-            <ul class="project-list">
-                {{ range where .Site.Data.projects "category" "bot" }}
-                    {{ partial "project.html" . }}
-                {{ end }}
-            </ul>
+              </h2>
+              <ul class="project-list">
+                  {{ range where .Site.Data.projects "category" "bot" }}
+                      {{ partial "project.html" . }}
+                  {{ end }}
+              </ul>
 
-            <h2 id="websites">
+              <h2 id="websites">
                 <svg class="icon">
                     <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#website"></use>
                 </svg>
                 Websites & web apps
-            </h2>
-            <ul class="project-list">
-                {{ range where .Site.Data.projects "category" "website" }}
-                    {{ partial "project.html" . }}
-                {{ end }}
-            </ul>
+              </h2>
+              <ul class="project-list">
+                  {{ range where .Site.Data.projects "category" "website" }}
+                      {{ partial "project.html" . }}
+                  {{ end }}
+              </ul>
 
-            <h2 id="presentations">
+              <h2 id="presentations">
                 <svg class="icon">
                     <use xlink:href="{{ .Site.BaseURL }}images/svg-symbols.svg#presentation"></use>
                 </svg>
                 Presentations
-            </h2>
-            <ul class="project-list">
-                {{ range where .Site.Data.projects "category" "presentation" }}
-                    {{ partial "project.html" . }}
-                {{ end }}
-            </ul>
+              </h2>
+              <ul class="project-list">
+                  {{ range where .Site.Data.projects "category" "presentation" }}
+                      {{ partial "project.html" . }}
+                  {{ end }}
+              </ul>
+            </section>
         </div>
     </main>
 </div>
