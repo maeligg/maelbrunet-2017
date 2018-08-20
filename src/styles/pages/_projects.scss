@@ -58,10 +58,6 @@
       @include respond-to(medium) {
         flex-wrap: nowrap;
       }
-
-      h3 {
-        margin-top: 0;
-      }
     }
 
     .year {
@@ -75,7 +71,7 @@
 
     .thumbnail {
       float: left;
-      margin: 0 20px 20px 0;
+      margin: 0 20px 0 0;
       height: 80px;
     }
   }

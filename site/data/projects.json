@@ -1,5 +1,14 @@
 [
   {
+    "name": "Dewi Origami",
+    "publicationYear": "2018",
+    "category": "website",
+    "thumbnail": "dewi-origami.svg",
+    "description": "A new portfolio site for origami artist Dewi Brunet. I helped him define what he wanted for his portfolio and did the design and development.",
+    "url": "https://dewiorigami.com",
+    "code": "https://github.com/maeligg/dewiorigamiV2"
+  },
+  {
     "name": "Markov Lyrics bot",
     "publicationYear": "2018",
     "category": "bot",
@@ -22,8 +31,7 @@
     "publicationYear": "2018",
     "category": "website",
     "thumbnail": "historical-snaps.png",
-    "description":
-      "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
+    "description": "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
     "url": "https://historical-snaps.netlify.com",
     "code": "https://historical-snaps.netlify.com"
   },
@@ -32,8 +40,7 @@
     "publicationYear": "2018",
     "category": "website",
     "thumbnail": "guardian-1959.png",
-    "description":
-      "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
+    "description": "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
     "url": "https://guardian1959.netlify.com/",
     "code": "https://github.com/maeligg/guardian-1959"
   },
@@ -42,8 +49,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "facho-bot.jpg",
-    "description":
-      "A Twitter bot built in Node.js that replies with nonsensical racist slur to random press articles. Tweets in French.",
+    "description": "A Twitter bot built in Node.js that replies with nonsensical racist slur to random press articles. Tweets in French.",
     "url": "https://twitter.com/facho_bot",
     "code": "https://github.com/maeligg/facho-bot"
   },
@@ -68,8 +74,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "francais-mofo.jpg",
-    "description":
-      "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations. Tweets in French.",
+    "description": "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations. Tweets in French.",
     "url": "https://twitter.com/francais_mofo",
     "code": "https://github.com/maeligg/francais-mofo"
   },
@@ -86,8 +91,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "patchs-litteraires.jpg",
-    "description":
-      "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
+    "description": "A Twitter bot that \"improves\" literary classics with video game patch notes. Built using Cheap Bots, Done Quick! Tweets in French.",
     "url": "https://twitter.com/patchslitt"
   },
   {
@@ -95,8 +99,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "js-lib-generator.png",
-    "description":
-      "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
+    "description": "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
     "url": "https://twitter.com/JSLibGenerator",
     "code": "https://github.com/maeligg/JSLibGenerator"
   }
