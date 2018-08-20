@@ -31,7 +31,6 @@
     margin: 20px;
     padding: 20px;
     border: 2px solid $green;
-
     @include respond-to(medium) {
       width: calc(50% - 40px);
     }
@@ -64,7 +63,7 @@
       margin-left: 20px;
       padding: 5px;
       font-size: 1rem;
-      background-color: $green;
+      background-color: $blue;
       color: #fff;
     }
 
