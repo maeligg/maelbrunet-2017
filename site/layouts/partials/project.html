@@ -9,7 +9,7 @@
     </a>
     <div class="year">{{ .publicationYear }}</div>
   </div>
-  <p>{{ .description }}</p>
+  <p>{{ safeHTML .description }}</p>
   {{ if .code }}
       <p><a href="{{ .code }}" target="_blank">Source code</a></p>
   {{ end }}

@@ -13,7 +13,7 @@
     "publicationYear": "2018",
     "category": "bot",
     "thumbnail": "markov-lyrics-bot.svg",
-    "description": "A Node.js script to retrieve and parse lyrics from an artist using the Genius.com API, and tweet new lyrics generated from Markov chains.",
+    "description": "A Node.js script to retrieve and parse lyrics from an artist using the Genius.com API, and tweet new lyrics generated from Markov chains. Used to create <a target=_blank href='https://twitter.com/BotB2o'>@BotB2O</a>.",
     "url": "https://twitter.com/BotB2o",
     "code": "https://github.com/maeligg/markov-lyrics-bot"
   },
@@ -43,15 +43,6 @@
     "description": "An experiment with CSS grid layout. Read today's news from The Guardian, in its original(ish) 1959 layout.",
     "url": "https://guardian1959.netlify.com/",
     "code": "https://github.com/maeligg/guardian-1959"
-  },
-  {
-    "name": "Facho bot",
-    "publicationYear": "2017",
-    "category": "bot",
-    "thumbnail": "facho-bot.jpg",
-    "description": "A Twitter bot built in Node.js that replies with nonsensical racist slur to random press articles. Tweets in French.",
-    "url": "https://twitter.com/facho_bot",
-    "code": "https://github.com/maeligg/facho-bot"
   },
   {
     "name": "In search of the ideal icon system",
