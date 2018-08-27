@@ -4,17 +4,8 @@
     font-style: italic;
   }
 
-  .notice-print {
-    display: none;
-  }
-
   h2 {
     margin-top: 2rem;
-  }
-
-  .me,
-  .contact-info {
-    display: none;
   }
 
   .summary {
@@ -22,7 +13,7 @@
   }
 
   .languages {
-    @include respond-to(medium) {
+    @include respond-to(small) {
       float: right;
       margin: 2rem 0 0 2rem;
       padding: 20px;

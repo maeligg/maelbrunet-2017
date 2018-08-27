@@ -1,3 +1,7 @@
+.print-only {
+  display: none;
+}
+
 @media print {
   body {
     display: block !important;
@@ -6,11 +10,11 @@
     border: none !important;
   }
 
-  header, .main-nav, .notice-web, footer {
+  header, .main-nav, .menu-toggle, .notice-web, .cookies, footer {
     display: none !important;
   }
 
-  .me, .contact-info, .notice-print {
+  .print-only {
     display: block !important;
   }
 
