@@ -1,6 +1,6 @@
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -48,4 +48,13 @@
 
 .is-hidden {
   display: none !important;
+}
+
+.unicorn {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
 }

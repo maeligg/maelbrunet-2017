@@ -2,8 +2,7 @@
   "extends": "airbnb-base",
 
   "rules": {
-    "linebreak-style": "off",
-    "func-names": "off"
+    "no-new": 0
   },
 
   "env": {
@@ -12,10 +11,6 @@
 
   // Declare allowed global variables below
   "globals": {
-    "svg4everybody" : false,
-    "Barba" : false,
-    "initTyping" : false,
-    "cornify_add": false,
-    "Cookies": false
+    "cornify_add": false
   }
 }

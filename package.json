@@ -2,7 +2,12 @@
   "name": "maelbrunet",
   "version": "1.0.0",
   "description": "The personal website of Maël Brunet",
-  "dependencies": {},
+  "dependencies": {
+    "barba.js": "^1.0.0",
+    "js-cookie": "^2.2.0",
+    "svg4everybody": "^2.1.9",
+    "typed.js": "^2.0.9"
+  },
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
@@ -26,13 +31,13 @@
     "gulp-util": "^3.0.6",
     "rollup": "^0.65.0",
     "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-eslint": "^5.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-terser": "^1.0.1"
   },
   "scripts": {
     "build": "gulp build && cd site && hugo",
-    "watch": "concurrently \"gulp\" \"cd site && hugo server\"",
-    "bundle": "rollup -c"
+    "watch": "concurrently \"gulp\" \"cd site && hugo server\""
   }
 }

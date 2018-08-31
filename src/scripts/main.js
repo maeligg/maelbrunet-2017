@@ -1,3 +1,7 @@
+import Barba from 'barba.js';
+import svg4everybody from 'svg4everybody';
+import Typed from 'typed.js';
+
 // A generic class toggler on click
 const toggleActive = () => {
   const toggleElements = document.querySelectorAll('.js-toggle-active');
@@ -6,6 +10,19 @@ const toggleActive = () => {
       element.classList.toggle('active');
     });
   });
+};
+
+const initTyping = () => {
+  if (document.querySelector('.txt-rotate')) {
+    const options = {
+      strings: ['front-end developer', 'UI designer', 'problem-solver'],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true,
+    };
+
+    new Typed('.txt-rotate', options);
+  }
 };
 
 // Relaunch animation that need to check for specific DOM elements
@@ -21,9 +38,7 @@ const pageTransition = () => {
 
   const FadeTransition = Barba.BaseTransition.extend({
     start() {
-      Promise
-        .all([this.newContainerLoading, this.fadeOut()])
-        .then(this.fadeIn.bind(this));
+      Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
     },
 
     fadeOut() {
@@ -35,9 +50,13 @@ const pageTransition = () => {
       }
 
       this.oldContainer.classList.remove('visible');
-      this.oldContainer.addEventListener('transitionend', () => {
-        deferred.resolve();
-      }, false);
+      this.oldContainer.addEventListener(
+        'transitionend',
+        () => {
+          deferred.resolve();
+        },
+        false,
+      );
 
       return deferred.promise;
     },
@@ -54,7 +73,6 @@ const pageTransition = () => {
   Barba.Pjax.start();
 };
 
-
 // Better than konami code
 const unicorns = () => {
   const pressed = [];
@@ -63,21 +81,17 @@ const unicorns = () => {
   window.addEventListener('keyup', (e) => {
     pressed.push(e.key);
     pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-    if (pressed.join('').includes(secretCode)) {
-      cornify_add();
+    if (pressed.join('') === secretCode) {
+      const img = document.createElement('img');
+      img.src = '/images/unicorn.gif';
+      img.classList.add('unicorn');
+      img.addEventListener('click', (event) => {
+        event.target.parentNode.removeChild(event.target);
+      });
+      document.querySelector('body').appendChild(img);
     }
   });
 };
-
-
-// Can only be called from the console
-// eslint-disable-next-line
-const unicorn = () => {
-  cornify_add();
-  // eslint-disable-next-line
-  console.log('Well, this is pretty childish.');
-};
-
 
 // Mobile menu open toggle
 const toggleMenu = () => {
@@ -87,13 +101,14 @@ const toggleMenu = () => {
   });
 };
 
-
 // Greeting message for the console
 const consoleGreet = () => {
   // eslint-disable-next-line
-  console.log('%c%s',
-  'color: #11af60; font-style: italic;',
-  'Why, hello there ! If you\'re looking for the source code of this site, it\'s available at https://github.com/maeligg/maelbrunet . Hope you enjoy your stay !');
+  console.log(
+    '%c%s',
+    'color: #11af60; font-style: italic;',
+    "Why, hello there ! If you're looking for the source code of this site, it's available at https://github.com/maeligg/maelbrunet . Hope you enjoy your stay !",
+  );
 };
 
 // Display the cookie notice if not in the sessionStorage
@@ -103,7 +118,7 @@ const displayCookieNotice = () => {
     cookiesWindow.classList.remove('is-hidden');
   }
 
-  document.querySelectorAll('.js-cookies-agree').forEach((e) => {
+  [].forEach.call(document.querySelectorAll('.js-cookies-agree'), (e) => {
     e.addEventListener('click', () => {
       sessionStorage.setItem('cookies', 'true');
       cookiesWindow.classList.add('is-hidden');
@@ -127,7 +142,6 @@ window.onload = () => {
   consoleGreet();
   displayCookieNotice();
 };
-
 
 window.addEventListener('resize', () => {
   const menu = document.querySelector('.menu-toggle');
