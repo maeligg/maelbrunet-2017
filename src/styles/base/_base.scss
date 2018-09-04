@@ -32,7 +32,6 @@ body {
   font-size: 62.5%;
   color: $text-color;
   font-family: $text-font-stack;
-  font-display: swap;
   border-bottom: 4px solid $green;
 
   @include respond-to(medium) {
