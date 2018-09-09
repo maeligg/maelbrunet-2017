@@ -135,7 +135,6 @@ nav {
           $green 100%
         );
         animation: none;
-
         a {
           color: #fff;
           @include on-event {
@@ -144,11 +143,9 @@ nav {
         }
       }
     }
-
     .menu-icon {
       height: 60px;
       width: 60px;
-
       .top-bun,
       .salad,
       .burger,
@@ -156,14 +153,12 @@ nav {
         transition: transform 0.3s ease-out;
       }
     }
-
     .menu-text {
       font-size: 1rem;
       text-transform: uppercase;
       color: $text-color;
     }
   }
-
   .main-nav {
     display: none;
     position: relative;
@@ -171,67 +166,58 @@ nav {
     height: 100%;
     margin: 0 0 0 20px;
     padding: 0;
-
     @include respond-to(medium) {
       display: flex;
     }
-
     @include on-event {
       .line {
         opacity: 1;
       }
     }
-
     li {
       padding: 20px;
       list-style: none;
       font-size: 2rem;
-
       &.active {
         ~ .line {
           opacity: 1;
         }
-
         &:nth-child(1) ~ .line {
           left: 20px;
         }
+
         &:nth-child(2) ~ .line {
-          left: 180px;
+          left: 195px;
         }
         &:nth-child(3) ~ .line {
-          left: 370px;
+          left: 390px;
         }
-
         a {
           color: $blue;
         }
       }
-
       @include on-event {
         &:nth-child(1) ~ .line {
           left: 20px;
         }
         &:nth-child(2) ~ .line {
-          left: 180px;
+          left: 195px;
         }
         &:nth-child(3) ~ .line {
-          left: 370px;
+          left: 390px;
         }
       }
-
       a {
         border: none;
         color: $text-color;
         text-decoration: none;
         text-transform: uppercase;
-
         @include on-event {
           text-decoration: none;
           font-weight: normal;
         }
       }
     }
-
     .line {
       padding: 0;
       opacity: 0;
