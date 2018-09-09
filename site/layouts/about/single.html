@@ -1,50 +1,86 @@
-{{ partial "head" . }}
-
-{{ partial "nav" . }}
+{{ partial "head" . }} {{ partial "nav" . }}
 
 <div id="barba-wrapper">
-    <main class="barba-container about">
-        <div class="container">
-          <img src="{{ .Site.BaseURL }}images/mael.jpg" alt="Maël Brunet" class="me">
+  <main class="barba-container about">
+    <div class="container">
+      <img src="{{ .Site.BaseURL }}images/mael.jpg" alt="Maël Brunet" class="me">
 
-          <section class="intro">
-            <h1>About</h1>
-            <p>I'm a self-taught french (front-end) web developer and UI designer living in Brussels, Belgium. I code mostly on the client-side, designing accessible and beautiful interfaces with HTML & CSS, and programming awesome experiences with JavaScript. For more information about my professional experience, please have a look at my <a href="{{ .Site.BaseURL }}resume">resume</a>.</p>
-          </section>
+      <section class="intro">
+        <h1>About</h1>
+        <p>I'm a self-taught french (front-end) web developer and UI designer living in Brussels, Belgium. I code mostly on
+          the client-side, designing accessible and beautiful interfaces with HTML & CSS, and programming awesome experiences
+          with JavaScript. For more information about my professional experience, please have a look at my
+          <a href="{{ .Site.BaseURL }}resume">resume</a>.</p>
+      </section>
 
-          <section class="skills">
-            <h2>Things I<span> ❤ </span>️(and I like to think I'm pretty good at)</h2>
-            <ul class="❤">
-                {{ partial "skill" (dict "icon" "&lt/&gt" "iconClass" "html" "text" "Clean, semantic HTML markup") }}
-                {{ partial "skill" (dict "icon" "{ }" "text" "Responsive, well scoped CSS") }}
-                {{ partial "skill" (dict "icon" "( )" "text" "Modular, composable JavaScript") }}
-                {{ partial "skill" (dict "icon" "//" "text" "Well commented, maintainable code") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#vue'></use></svg>" "text" "<span>Modern JavaScript frameworks (I have a soft spot for <a href='https://vuejs.org/' target='_blank'>Vue.js</a>)</span>") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#speedometer'></use></svg>" "text" "Lightweight, performant websites") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#a11y'></use></svg>" "text" "Accessibility — the web is for everyone") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#smartphone'></use></svg>" "text" "Beautiful, clearly understandable UI") }}
-                {{ partial "skill" (dict "iconClass" "animation" "text" "Meaningful and playful animations") }}
-                {{ partial "skill" (dict "icon" "<abbr title='Scalable Vector Graphics'>SVG</abbr>" "iconClass" "svg" "text" "Perfect for icons, logos, animations") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#eye'></use></svg>" "text" "Attention to detail : it's the little things that matter") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#team'></use></svg>" "text" "Code reviews, discussing and sharing best practices") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#wrench'></use></svg>" "text" "Using the right tools for the perfect build process") }}
-                {{ partial "skill" (dict "icon" "<svg><use xlink:href='/images/svg-symbols.svg#styleguide'></use></svg>" "text" "Styleguide and design systems to build consistent UI at scale") }}
-                {{ partial "skill" (dict "icon" "<abbr title='Keep It Simple, Stupid'>KISS</abbr>" "iconClass" "kiss" "text" "Avoid unnecessary complexity") }}
-                {{ partial "skill" (dict "icon" "<abbr title='JavaScript, APIs and Markup'>JAMstack</abbr>" "iconClass" "jam" "text" "The <span><a href='https://jamstack.org/' target='_blank'>JAMstack</a> is my jam (this very website is built with <a href='https://gohugo.io/ target='_blank'>Hugo</a>)</span>") }}
+      <section class="skills">
+        <h2>Things I
+          <span> ❤ </span>️(and I like to think I'm pretty good at)</h2>
+        <ul class="❤">
+          {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#html'></use>
+          </svg>" "text" "Clean, semantic HTML markup") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#css'></use>
+          </svg>" "text" "Responsive, well scoped CSS") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#javascript'></use>
+          </svg>" "text" "Modular, composable JavaScript") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#html'></use>
+          </svg>" "text" "Well commented, maintainable code") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#comments'></use>
+          </svg>" "text" "
+          <span>Modern JavaScript frameworks (I have a soft spot for
+            <a href='https://vuejs.org/' target='_blank'>Vue.js</a>)</span>") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#speedometer'></use>
+          </svg>" "text" "Lightweight, performant websites") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#a11y'></use>
+          </svg>" "text" "Accessibility — the web is for everyone") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#smartphone'></use>
+          </svg>" "text" "Beautiful, clearly understandable UI") }} {{ partial "skill" (dict "iconClass" "animation" "text" "Meaningful
+          and playful animations") }} {{ partial "skill" (dict "icon" "
+          <abbr title='Scalable Vector Graphics'>SVG</abbr>" "iconClass" "svg" "text" "Perfect for icons, logos, animations") }} {{ partial "skill" (dict "icon"
+          "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#eye'></use>
+          </svg>" "text" "Attention to detail : it's the little things that matter") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#team'></use>
+          </svg>" "text" "Code reviews, discussing and sharing best practices") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#wrench'></use>
+          </svg>" "text" "Using the right tools for the perfect build process") }} {{ partial "skill" (dict "icon" "
+          <svg>
+            <use xlink:href='/images/svg-symbols.svg#styleguide'></use>
+          </svg>" "text" "Styleguide and design systems to build consistent UI at scale") }} {{ partial "skill" (dict "icon" "
+          <abbr
+            title='Keep It Simple, Stupid'>KISS</abbr>" "iconClass" "kiss" "text" "Avoid unnecessary complexity") }} {{ partial "skill" (dict "icon" "
+          <abbr
+            title='JavaScript, APIs and Markup'>JAMstack</abbr>" "iconClass" "jam" "text" "The
+          <span>
+            <a href='https://jamstack.org/' target='_blank'>JAMstack</a> is my jam (this very website is built with
+            <a href='https://gohugo.io/ target=' _blank
+              '>Hugo</a>)</span>") }}
             </ul>
           </section>
 
           <section class="other">
             <h2>Outside of web development</h2>
             <p>I love hiking and running, especially out in the woods.</p>
-            <p>Food is very important to me, I enjoy every part of the process : picking the right ingredients, cooking (I'm not big on cakes, but I like making just about anything else), and sharing a meal in good company. I find the whole process very similar to web development in some aspects.</p>
-            <p>I play video games (though not as much as I used to), mostly on PC, and I have a particular fondness for rich narrative experiences and emergent stories.</p>
-            <p>Other than that, I enjoy spending time with friends, preferably over a nice, cool beer 🍺.</p>
-          </section>
-        </div>
-    </main>
+            <p>Food is very important to me, I enjoy every part of the process : picking the right ingredients, cooking (I'm not big on cakes, but I like making just about anything else), and sharing a meal in good company. I find
+              the whole process very similar to web development in some aspects.</p>
+              <p>I play video games (though not as much as I used to), mostly on PC, and I have a particular fondness for rich
+                narrative experiences and emergent stories.</p>
+              <p>Other than that, I enjoy spending time with friends, preferably over a nice, cool beer 🍺.</p>
+      </section>
+    </div>
+  </main>
 </div>
 
-{{ partial "cookies" . }}
-
-{{ partial "footer" . }}
+{{ partial "cookies" . }} {{ partial "footer" . }}
