@@ -31,50 +31,56 @@
   }
 
   .project-item {
+    position: relative;
     width: 100%;
     margin: 20px;
     padding: 20px;
     border: 2px solid $green;
-    @include respond-to(medium) {
-      width: calc(50% - 40px);
-    }
+    background-color: #fff;
+    transition: all 0.2s ease-out;
 
     @supports (display: grid) {
       width: 100%;
       margin: 0;
     }
 
-    .project-inner-wrapper {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
+    @include on-event {
+      background-color: $green;
+      color: #fff;
 
-    .project-link {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      border: none;
-
-      @include respond-to(medium) {
-        flex-wrap: nowrap;
+      .project-source {
+        color: #fff;
       }
     }
+  }
 
-    .year {
-      float: right;
-      margin-left: 20px;
-      padding: 5px;
-      font-size: 1rem;
-      background-color: $blue;
-      color: #fff;
-    }
+  .project-link {
+    display: block;
+    text-indent: -9999px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 0px;
+  }
 
-    .thumbnail {
-      float: left;
-      margin: 0 20px 0 0;
-      height: 80px;
-    }
+  .project-year {
+    float: right;
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 1rem;
+    background-color: $blue;
+    color: #fff;
+  }
+
+  .project-thumbnail {
+    float: left;
+    margin: 0 20px 0 0;
+    height: 80px;
+  }
+
+  .project-source {
+    position: relative;
   }
 }

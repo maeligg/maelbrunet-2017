@@ -2,15 +2,12 @@
 {{ $image_alt := index $image_name 0 }}
 
 <li class="project-item">
-  <div class="project-inner-wrapper">
-    <a href="{{ .url }}" target="_blank" class="project-link">
-      <img src="{{ .Site.BaseURL }}/images/project-thumbnails/{{ .thumbnail }}" alt="{{ $image_alt }}" class="thumbnail">
-      <h3>{{ .name }}</h3>
-    </a>
-    <div class="year">{{ .publicationYear }}</div>
-  </div>
+  <a href="{{ .url }}" target="_blank" class="project-link">{{ .name }}</a>
+  <div class="project-year">{{ .publicationYear }}</div>
+  <img src="{{ .Site.BaseURL }}/images/project-thumbnails/{{ .thumbnail }}" alt="{{ $image_alt }}" class="project-thumbnail">
+  <h3>{{ .name }}</h3>
   <p>{{ safeHTML .description }}</p>
   {{ if .code }}
-      <p><a href="{{ .code }}" target="_blank">Source code</a></p>
+      <a href="{{ .code }}" class="project-source" target="_blank">Source code</a>
   {{ end }}
 </li>
