@@ -1,5 +1,14 @@
 [
   {
+    "name": "What if paintings",
+    "publicationYear": "2018",
+    "category": "bot",
+    "thumbnail": "what-if-paintings.jpg",
+    "description": "A mastodon bot built in Node.js that shares famous paintings recreated in the style of another famous painter, using <a target=_blank href='https://www.tensorflow.org/'>Tensorflow</a>’s style transfer.",
+    "url": "https://botsin.space/@what_if_paintings",
+    "code": "https://glitch.com/~what-if-paintings"
+  },
+  {
     "name": "Dewi Origami",
     "publicationYear": "2018",
     "category": "website",
