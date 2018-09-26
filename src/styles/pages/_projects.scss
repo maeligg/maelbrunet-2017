@@ -39,6 +39,10 @@
     background-color: #fff;
     transition: all 0.2s ease-out;
 
+    a {
+      transition: all 0.2s ease-out;
+    }
+
     @supports (display: grid) {
       width: 100%;
       margin: 0;
@@ -48,7 +52,7 @@
       background-color: $green;
       color: #fff;
 
-      .project-source {
+      a {
         color: #fff;
       }
     }
@@ -80,6 +84,7 @@
     height: 80px;
   }
 
+  .project-description a,
   .project-source {
     position: relative;
   }

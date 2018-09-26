@@ -6,7 +6,7 @@
   <div class="project-year">{{ .publicationYear }}</div>
   <img src="{{ .Site.BaseURL }}/images/project-thumbnails/{{ .thumbnail }}" alt="{{ $image_alt }}" class="project-thumbnail">
   <h3>{{ .name }}</h3>
-  <p>{{ safeHTML .description }}</p>
+  <p class="project-description">{{ safeHTML .description }}</p>
   {{ if .code }}
       <a href="{{ .code }}" class="project-source" target="_blank">Source code</a>
   {{ end }}
