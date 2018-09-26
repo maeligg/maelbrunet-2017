@@ -1,9 +1,11 @@
 .me {
   display: block;
+  height: 11rem;
   width: 11rem;
   margin: 0 auto;
   border-radius: 50%;
   border: 4px solid $blue;
+  background-color: $light-grey;
 
   @include respond-to(small) {
     float: right;
