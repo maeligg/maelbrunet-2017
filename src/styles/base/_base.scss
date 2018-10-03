@@ -64,6 +64,7 @@ h5,
 h6 {
   font-weight: 400;
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -88,4 +89,8 @@ section {
 
 abbr {
   cursor: help;
+}
+
+hr {
+  margin: 1rem 0;
 }
