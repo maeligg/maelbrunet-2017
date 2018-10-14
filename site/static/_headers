@@ -10,4 +10,4 @@
     # Disable plugins like Flash or Silverlight
     # Load images, scripts, stylesheets and fonts from self
     # Send reports to report-uri.io
-    Content-Security-Policy: frame-ancestors 'none'; default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; report-uri https://4ad764e41edf42aa7c5ebe2837e78651.report-uri.com/r/d/csp/enforce;
+    Content-Security-Policy: frame-ancestors 'none'; default-src 'self'; object-src 'none'; img-src 'self'; script-src 'self' https://*.cloudfront.net; style-src 'self' 'unsafe-inline'; font-src 'self'; report-uri https://4ad764e41edf42aa7c5ebe2837e78651.report-uri.com/r/d/csp/enforce;
