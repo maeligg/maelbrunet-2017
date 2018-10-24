@@ -4,7 +4,7 @@
     "publicationYear": "2018",
     "category": "bot",
     "thumbnail": "what-if-paintings.jpg",
-    "description": "A mastodon bot built in Node.js that shares famous paintings recreated in the style of another famous painter, using <a target=_blank href='https://www.tensorflow.org/'>Tensorflow</a>’s style transfer.",
+    "description": "A mastodon bot built in Node.js that shares famous paintings recreated in the style of another famous painter, using <a href='https://www.tensorflow.org/'>Tensorflow</a>’s style transfer.",
     "url": "https://botsin.space/@what_if_paintings",
     "code": "https://glitch.com/~what-if-paintings"
   },
@@ -22,7 +22,7 @@
     "publicationYear": "2018",
     "category": "bot",
     "thumbnail": "markov-lyrics-bot.svg",
-    "description": "A Node.js script to retrieve and parse lyrics from an artist using the Genius.com API, and tweet new lyrics generated from Markov chains. Used to create <a target=_blank href='https://twitter.com/BotB2o'>@BotB2O</a>.",
+    "description": "A Node.js script to retrieve and parse lyrics from an artist using the Genius.com API, and tweet new lyrics generated from Markov chains. Used to create <a href='https://twitter.com/BotB2o'>@BotB2O</a>.",
     "url": "https://twitter.com/BotB2o",
     "code": "https://github.com/maeligg/markov-lyrics-bot"
   },
