@@ -1,5 +1,14 @@
 [
   {
+    "name": "console.❤️",
+    "publicationYear": "2018",
+    "category": "website",
+    "thumbnail": "console-love.png",
+    "description": "A collection of funny, quirky and lovely console messages from around the web",
+    "url": "https://www.console.love",
+    "code": "https://github.com/maeligg/console.love"
+  },
+  {
     "name": "What if paintings",
     "publicationYear": "2018",
     "category": "bot",
