@@ -4,13 +4,13 @@
     color: $text-color;
 
     @include respond-to(small) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     @include respond-to(medium) {
       position: absolute;
       bottom: 60px;
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
 
     a {
