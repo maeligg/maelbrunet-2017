@@ -1,0 +1,129 @@
+{{ partial "head" . }}
+
+{{ partial "nav" . }}
+
+<div id="barba-wrapper">
+  <main class="barba-container resume">
+    <div class="container">
+      <h1>Curriculum Vitae</h1>
+      <p class="notice-web">🖨️ Cette page est optimisée pour l'impression, n'hésitez pas à l'imprimer ou à l'exporter au format PDF.</p>
+      <p class="print-only">Ce document est également disponible comme page web l'adresse <a href="{{ .Site.BaseURL }}resume-fr">{{ .Site.BaseURL }}resume-fr</a></p>
+
+      <img src="{{ .Site.BaseURL }}images/mael.jpg" alt="Maël Brunet" class="me print-only">
+
+      <p class="print-only">📧 maelbrunet<span class="highlight">[at]</span>gmail<span class="highlight">[point]</span>com</p>
+
+      <h2>À propos</h2>
+      <p>Je suis un développeur web front-end et concepteur d'interfaces utilisateur spécialisé dans la performance et l'accessibilité, basé à Bruxelles (Belgique). J'ai une très bonne maîtrise des technologies qui sont au cœur du développement front-end: HTML, CSS et Javascript. Je suis convaincu qu'une connaissance approfondie de ces standards est essentielle pour être un bon développeur front-end, et tout le reste (les frameworks en particulier) peut être appris au besoin.</p>
+
+      <p>Je crois qu'une bonne interface utilisateur est comme une blague: il ne devrait pas y avoir besoin de l'expliquer. Je préfère la simplicité et l'intuitivité aux interfaces trop lourdes et complexes. J'aime travailler avec des prototypes pour valider des hypothèses et itérer rapidement, et des "design systems" permettant de créer et maintenir des interfaces utilisateur cohérentes.</p>
+
+      <p>Je considère la communication ouverte, l'empathie et l'inclusivité comme les composants essentiels d'une équipe performante. Pour plus d’informations sur moi, rendez-vous sur ma page <a href="{{ .Site.BaseURL }}about">à propos</a>.</p>
+
+      <hr>
+
+      <h2>Compétences</h2>
+      <p>
+        Vous aimez les mots-clés? J'ai de l'expérience projet avec les outils et technologies suivants:
+      </p>
+      <p>Git, Bash, HTML, CSS, Sass, JavaScript (including ES6+), React, Redux, Vue, Jest, npm, Node, Webpack, Rollup, Gulp, Babel, ESlint, Lodash, JQuery, Bootstrap, méthodologies agiles.</p>
+
+      <hr>
+
+      <h2>Expérience professionnelle</h2>
+      <ul class="work-xp">
+        <li>
+          <div class="meta">
+            <div class="org"><a href="https://www.isabelgroup.eu/en/">Isabel Group</a></div>
+            <div class="year">Jan 2018 - aujourd'hui</div>
+          </div>
+          <div class="description">
+            J'ai rejoint Isabel Group en tant que <b>développeur front-end et spécialiste UI</b>. Isabel Group est la plus grande fintech de Belgique, fournissant des services bancaires des services tels que Isabel 6, Zoomit et CodaBox aux entreprises de toutes tailles. Intégré à une petite équipe de reportage
+              directement au PDG, je travaille sur divers projets, notamment:
+            <ul>
+              <li>J'ai créé et entretenu une bibliothèque de composants UI permettant de les partager entre plusieurs projets, à l'aide de Vue, Storybook et de paquets npm.</li>
+              <li>J'ai lancé et dirigé une « communauté de pratique » front-end, regroupant les designers et développeurs de toutes les équipes au sein du groupe sur une base régulière pour partager les expériences et les bonnes pratiques.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="meta">
+            <div class="org"><a href="https://www.emakina.be/">Emakina</a></div>
+            <div class="year">Jan 2016 - Déc 2017</div>
+          </div>
+          <div class="description">
+            J'étais <b>développeur front-end</b> chez Emakina, une des plus grandes agences web indépendantes en Europe. J'ai eu la chance de travailler pour des grandes marques telles que Ouibus, D'Ieteren, la Deutsche Bank, Federale Assurance, ... Parmi les projets auxquels j'ai participé, citons :
+            <ul>
+              <li>Une refonte complète du site web de <a href="https://www.federale.be">Federale Assurance</a>, fonctionnant sur une nouvelle plate-forme et comprenant une application permettant de trouver le bureau Federale le plus proche. J'étais lead développeur front-end sur ce projet.</li>
+              <li>Une nouvelle <a href="https://onlinebanking.deutschebank.be">application web</a> de banque en ligne pour Deutsche Bank Belgique, offrant une expérience utilisateur considérablement améliorée. J'ai travaillé sur une partie de la conception UI et la partie HTML / CSS pour ce projet.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="meta">
+            <div class="org"><a href="http://www.openforumeurope.org/">OpenForum Europe</a></div>
+            <div class="year">Mai 2012 - Déc 2015</div>
+          </div>
+          <div class="description">
+            J'étais <b>responsable politiques publiques</b> et <b>webmaster</b> pour OpenForum Europe (OFE), une organisation industrielle à but non lucratif qui vise à faciliter et encourager l'utilisation des logiciels libres par les entreprises, les consommateurs et les gouvernements. En 2013, j'ai rejoint le conseil d'administration de l'organisation en tant que <b>directeur de la politique européenne</b>.
+            <ul>
+              <li>J'ai dirigé et aidé à développer l'équipe du bureau de Bruxelles. J'ai commencé comme la seule personne travaillant
+                là-bas, et en 2016, l’équipe comptait 4 personnes à contrat, plus un stagiaire.</li>
+              <li>J'ai conçu et développé un <a href="http://www.openforumeurope.org/">nouveau site web</a> pour OFE
+                à partir de zéro en utilisant un thème WordPress personnalisé, organisé la migration du contenu depuis l'<a href="http://archive.openforumeurope.org/">ancien site</a> basé sur le CMS Plone.</li>
+              <li>À partir de 2015, j'ai créé et maintenu une <a href = "http://us10.campaign-archive2.com/home/?u=92e540ce342922d890e7dc17a&id=cc91892046".
+                >newsletter mensuelle</a> en soutien à la nouvelle stratégie de communication en ligne d'OFE.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <hr>
+
+      <div class="languages">
+        <h2>Langues</h2>
+        <ul>
+          <li>Français (langue maternelle)</li>
+          <li>Anglais (bilingue)</li>
+          <li>Espagnol (intermédiaire)</li>
+          <li>Néerlandais (débutant)</li>
+        </ul>
+      </div>
+
+      <h2>Éducation</h2>
+      <ul class="education">
+        <li>
+          <div class="meta">
+            <div class="org">Institut d'Etudes Politiques de Lille</div>
+            <div class="year">2006 - 2011</div>
+          </div>
+          <div class="description">
+            Master II en Sciences Politiques
+          </div>
+        </li>
+        <li>
+          <div class="meta">
+            <div class="org">University of Kent in Canterbury</div>
+            <div class="year">2006 - 2010</div>
+          </div>
+          <div class="description">
+            Bachelor of Arts in Politics, Philosophy and Economics
+          </div>
+        </li>
+        <li>
+          <div class="meta">
+            <div class="org">European School of Brussels II</div>
+            <div class="year">2006</div>
+          </div>
+          <div class="description">
+            Baccalauréat
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+</div>
+
+{{ partial "cookies" . }}
+
+{{ partial "footer" . }}
