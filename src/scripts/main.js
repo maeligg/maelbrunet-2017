@@ -1,4 +1,3 @@
-import Barba from 'barba.js';
 import svg4everybody from 'svg4everybody';
 import Typed from 'typed.js';
 
@@ -23,54 +22,6 @@ const initTyping = () => {
 
     new Typed('.txt-rotate', options);
   }
-};
-
-// Relaunch animation that need to check for specific DOM elements
-const checkDOM = () => {
-  initTyping();
-  toggleActive();
-};
-
-// Page transition using barba.js
-const pageTransition = () => {
-  Barba.Prefetch.init(); // Prefetch page when mouseover/touchstart
-  document.querySelector('.barba-container').classList.add('visible');
-
-  const FadeTransition = Barba.BaseTransition.extend({
-    start() {
-      Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
-    },
-
-    fadeOut() {
-      const deferred = Barba.Utils.deferred();
-      const mobileMenu = document.querySelector('.menu-toggle');
-
-      if (mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open');
-      }
-
-      this.oldContainer.classList.remove('visible');
-      this.oldContainer.addEventListener(
-        'transitionend',
-        () => {
-          deferred.resolve();
-        },
-        false,
-      );
-
-      return deferred.promise;
-    },
-
-    fadeIn() {
-      checkDOM();
-      this.newContainer.classList.add('visible');
-      this.done();
-    },
-  });
-
-  Barba.Pjax.getTransition = () => FadeTransition;
-
-  Barba.Pjax.start();
 };
 
 // Better than konami code
@@ -135,7 +86,6 @@ const displayCookieNotice = () => {
 window.onload = () => {
   svg4everybody();
   initTyping();
-  pageTransition();
   toggleActive();
   toggleMenu();
   unicorns();
