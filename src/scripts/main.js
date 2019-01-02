@@ -44,14 +44,6 @@ const unicorns = () => {
   });
 };
 
-// Mobile menu open toggle
-const toggleMenu = () => {
-  const menuToggler = document.querySelector('.js-menu-toggle');
-  menuToggler.addEventListener('click', () => {
-    menuToggler.classList.toggle('open');
-  });
-};
-
 // Greeting message for the console
 const consoleGreet = () => {
   // eslint-disable-next-line
@@ -82,21 +74,23 @@ const displayCookieNotice = () => {
   });
 };
 
+const resetMenu = () => {
+  window.addEventListener('resize', () => {
+    const menu = document.querySelector('.js-menu-toggle');
+
+    if (menu.classList.contains('open')) {
+      menu.classList.remove('open');
+    }
+  });
+};
+
 // Call functions
 window.onload = () => {
   svg4everybody();
   initTyping();
   toggleActive();
-  toggleMenu();
   unicorns();
   consoleGreet();
   displayCookieNotice();
+  resetMenu();
 };
-
-window.addEventListener('resize', () => {
-  const menu = document.querySelector('.menu-toggle');
-
-  if (menu.classList.contains('active')) {
-    menu.classList.remove('active');
-  }
-});
