@@ -20,8 +20,9 @@
 
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, 200px);
       grid-gap: 1rem 3rem;
+      justify-content: center;
     }
   }
 
@@ -96,10 +97,10 @@
     &::before {
       content: "";
       position: absolute;
-      top: -2px;
+      top: -3px;
       left: 50%;
       transform: translateX(-50%);
-      height: 3px;
+      height: 4px;
       width: calc(100% - 40px);
       background-color: #fff;
     }
