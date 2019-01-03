@@ -21,7 +21,7 @@
     @supports (display: grid) {
       display: grid;
       grid-template-columns: repeat(auto-fit, 200px);
-      grid-gap: 1rem 3rem;
+      grid-gap: 2rem;
       justify-content: center;
     }
   }
