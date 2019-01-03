@@ -1,13 +1,4 @@
 .about {
-  h1,
-  h2 {
-    text-align: center;
-
-    @include respond-to(medium) {
-      text-align: left;
-    }
-  }
-
   .intro {
     margin-bottom: 4rem;
   }
