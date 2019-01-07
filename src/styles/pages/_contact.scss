@@ -14,10 +14,14 @@
   }
 
   .animation {
+    display: none;
     position: relative;
 
+    @include respond-to(medium) {
+      display: block;
+    }
+
     .plane {
-      display: none;
       position: absolute;
       top: calc(50% - 150px);
       left: calc(50% - 150px);
@@ -25,10 +29,6 @@
       width: 300px;
       cursor: pointer;
       transition: all .3s ease-out;
-
-      @include respond-to(medium) {
-        display: block;
-      }
 
       @include on-event {
         animation: jiggle 0.2s alternate infinite ease-in-out;
@@ -42,7 +42,7 @@
           transform: rotate(1deg);
         }
       }
-      
+
       &.active {
         animation: fly 1s ease-in forwards;
       }
