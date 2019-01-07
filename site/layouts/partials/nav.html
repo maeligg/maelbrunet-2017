@@ -31,9 +31,9 @@
         </button>
 
         <ul class="main-nav">
-            <li {{ if eq .File.BaseFileName "about" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}about">About</a></li>
-            <li {{ if eq .File.BaseFileName "projects" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}projects">Projects</a></li>
-            <li {{ if eq .File.BaseFileName "contact" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}contact">Contact</a></li>
+            <li {{ if eq .Page.File.BaseFileName "about" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}about">About</a></li>
+            <li {{ if eq .Page.File.BaseFileName "projects" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}projects">Projects</a></li>
+            <li {{ if eq .Page.File.BaseFileName "contact" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}contact">Contact</a></li>
         </ul>
     </nav>
 </header>
