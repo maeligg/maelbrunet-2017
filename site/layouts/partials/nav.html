@@ -31,9 +31,9 @@
         </button>
 
         <ul class="main-nav">
-            <li {{ if eq .Page.File.BaseFileName "about" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}about">About</a></li>
-            <li {{ if eq .Page.File.BaseFileName "projects" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}projects">Projects</a></li>
-            <li {{ if eq .Page.File.BaseFileName "contact" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}contact">Contact</a></li>
+            <li {{ if in .Page.Permalink "about" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}about">About</a></li>
+            <li {{ if in .Page.Permalink "projects" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}projects">Projects</a></li>
+            <li {{ if in .Page.Permalink "contact" }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}contact">Contact</a></li>
         </ul>
     </nav>
 </header>
