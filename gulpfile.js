@@ -30,7 +30,6 @@ gulp.task('scripts', () =>
         // Workaround for Rollup not liking custom named exports
         commonjs({
           include: [
-            'node_modules/barba.js/**',
             'node_modules/svg4everybody/**',
             'node_modules/typed.js/**',
           ],

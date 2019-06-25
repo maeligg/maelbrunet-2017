@@ -46,7 +46,7 @@ nav {
     @include respond-to(medium) {
       width: 120px;
       height: 120px;
-      padding: 20px 20px 20px 30px;
+      padding: 20px;
     }
 
     @include on-event {
@@ -93,7 +93,7 @@ nav {
       background-color: transparent;
     }
 
-    &.open {
+    &.active {
       position: fixed;
       right: 20px;
       fill: #fff;
@@ -126,7 +126,6 @@ nav {
         left: 0;
         height: 100%;
         width: calc(100% + 20px);
-        margin-left: -20px;
         padding: 20px 20px 0 20px;
         text-align: left;
         background-image: linear-gradient(
@@ -164,70 +163,37 @@ nav {
     position: relative;
     align-items: center;
     height: 100%;
-    margin: 0 0 0 20px;
+    margin: 0;
     padding: 0;
     @include respond-to(medium) {
       display: flex;
-    }
-    @include on-event {
-      .line {
-        opacity: 1;
-      }
+      margin-left: 1rem;
     }
     li {
-      padding: 20px;
+      margin: 2rem 0;
       list-style: none;
       font-size: 2rem;
-      &.active {
-        ~ .line {
-          opacity: 1;
-        }
-        &:nth-child(1) ~ .line {
-          left: 20px;
-        }
 
-        &:nth-child(2) ~ .line {
-          left: 195px;
-        }
-        &:nth-child(3) ~ .line {
-          left: 390px;
-        }
-        a {
-          color: $blue;
-        }
-      }
-      @include on-event {
-        &:nth-child(1) ~ .line {
-          left: 20px;
-        }
-        &:nth-child(2) ~ .line {
-          left: 195px;
-        }
-        &:nth-child(3) ~ .line {
-          left: 390px;
-        }
-      }
       a {
+        padding: 20px;
         border: none;
         color: $text-color;
         text-decoration: none;
         text-transform: uppercase;
+
         @include on-event {
-          text-decoration: none;
-          font-weight: normal;
+          color: $blue;
         }
       }
-    }
-    .line {
-      padding: 0;
-      opacity: 0;
-      position: absolute;
-      left: -157px;
-      bottom: 10px;
-      transition: 0.3s ease-out;
-      width: 110px;
-      height: 6px;
-      background: $link-color;
+
+      &.active a {
+        outline: 4px solid #fff;
+
+        @include respond-to(medium) {
+          outline: 4px solid $green;
+          color: $blue;
+        }
+      }
     }
   }
 }

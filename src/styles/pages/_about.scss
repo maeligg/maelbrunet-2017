@@ -1,11 +1,6 @@
 .about {
-  h1,
-  h2 {
-    text-align: center;
-
-    @include respond-to(medium) {
-      text-align: left;
-    }
+  h1 {
+    display: inline;
   }
 
   .intro {
@@ -20,8 +15,9 @@
 
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      grid-gap: 1rem 3rem;
+      grid-template-columns: repeat(auto-fit, 200px);
+      grid-gap: 2rem;
+      justify-content: center;
     }
   }
 
@@ -96,10 +92,10 @@
     &::before {
       content: "";
       position: absolute;
-      top: -2px;
+      top: -3px;
       left: 50%;
       transform: translateX(-50%);
-      height: 3px;
+      height: 4px;
       width: calc(100% - 40px);
       background-color: #fff;
     }
