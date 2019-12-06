@@ -1,5 +1,14 @@
 [
   {
+    "name": "Sprout",
+    "publicationYear": "2019",
+    "category": "website",
+    "thumbnail": "sprout.jpg",
+    "description": "An idle game where you help a little sprout grow from bean to plant",
+    "url": "https://sprout.maelbrunet.com",
+    "code": "https://github.com/maeligg/sprout"
+  },
+  {
     "name": "console.❤️",
     "publicationYear": "2018",
     "category": "website",
