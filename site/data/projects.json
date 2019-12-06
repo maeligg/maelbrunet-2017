@@ -1,5 +1,14 @@
 [
   {
+    "name": "Every pumpkin",
+    "publicationYear": "2019",
+    "category": "bot",
+    "thumbnail": "every-pumpkin.jpg",
+    "description": "Procedurally generated pumpkin acrvings to spice up your Halloween",
+    "url": "https://twitter.com/EveryPumpkin",
+    "code": "https://t.co/E7I9n6KNuh?amp=1"
+  },
+  {
     "name": "Sprout",
     "publicationYear": "2019",
     "category": "website",
