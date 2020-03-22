@@ -1,12 +1,21 @@
 [
   {
+    "name": "Pimp my Marmiton",
+    "publicationYear": "2020",
+    "category": "bot",
+    "thumbnail": "pimp-my-marmiton.jpg",
+    "description": "",
+    "url": "https://twitter.com/pimp_recettes",
+    "code": "https://glitch.com/~pimp-my-marmiton"
+  },
+  {
     "name": "Every pumpkin",
     "publicationYear": "2019",
     "category": "bot",
     "thumbnail": "every-pumpkin.jpg",
-    "description": "Procedurally generated pumpkin acrvings to spice up your Halloween",
+    "description": "Procedurally generated pumpkin carvings to spice up your Halloween",
     "url": "https://twitter.com/EveryPumpkin",
-    "code": "https://t.co/E7I9n6KNuh?amp=1"
+    "code": "https://cheapbotsdonequick.com/source/EveryPumpkin"
   },
   {
     "name": "Sprout",
