@@ -3,8 +3,8 @@
     "name": "Pimp my Marmiton",
     "publicationYear": "2020",
     "category": "bot",
-    "thumbnail": "pimp-my-marmiton.jpg",
-    "description": "",
+    "thumbnail": "pimp-my-marmiton.png",
+    "description": "A Twitter bot posting recipe \"improvements\" suggested by user comments",
     "url": "https://twitter.com/pimp_recettes",
     "code": "https://glitch.com/~pimp-my-marmiton"
   },
