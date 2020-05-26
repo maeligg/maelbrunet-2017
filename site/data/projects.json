@@ -1,19 +1,45 @@
 [
   {
+    "name": "Emoji aquarium",
+    "publicationYear": "2020",
+    "category": "website",
+    "thumbnail": "emoji-aquarium.png",
+    "description": "Do you miss the old Windows screensaver with the fish tank ? Now you can enjoy it again, from the comfort of your own emoji set.",
+    "url": "https://emoji-aquarium.glitch.me/",
+    "code": "https://github.com/maeligg/emoji-aquarium"
+  },
+  {
+    "name": "COVID-19 or Movie ?",
+    "publicationYear": "2020",
+    "category": "website",
+    "thumbnail": "covid-19-or-movie.png",
+    "description": "Can you guess if these pictures were taken during the 2020 COVID-19 pandemic or from movie scenes ?",
+    "url": "https://covid19-or-movie.pizza",
+    "code": "https://github.com/maeligg/coronavirus-or-movie"
+  },
+  {
     "name": "Pimp my Marmiton",
     "publicationYear": "2020",
     "category": "bot",
     "thumbnail": "pimp-my-marmiton.png",
-    "description": "A Twitter bot posting recipe \"improvements\" suggested by user comments",
+    "description": "A Twitter bot posting recipe \"improvements\" suggested by user comments.",
     "url": "https://twitter.com/pimp_recettes",
     "code": "https://glitch.com/~pimp-my-marmiton"
+  },
+  {
+    "name": "Tips & tricks for building accessible SPAs",
+    "publicationYear": "2020",
+    "category": "presentation",
+    "thumbnail": "spa-accessibility.svg",
+    "description": "Single-Page Apps (SPAs) often leave users with disabilities behind, and this talk gives some practical advice on how to avoid this. Presented in January 2020 at the <a href='https://www.meetup.com/fr-FR/Inclusive-Design/events/267269159/'>Ghent Inclusive Design Meetup</a>.",
+    "url": "https://slides.com/maelig/web-apps-a11y"
   },
   {
     "name": "Every pumpkin",
     "publicationYear": "2019",
     "category": "bot",
     "thumbnail": "every-pumpkin.jpg",
-    "description": "Procedurally generated pumpkin carvings to spice up your Halloween",
+    "description": "Procedurally generated pumpkin carvings to spice up your Halloween.",
     "url": "https://twitter.com/EveryPumpkin",
     "code": "https://cheapbotsdonequick.com/source/EveryPumpkin"
   },
@@ -22,16 +48,32 @@
     "publicationYear": "2019",
     "category": "website",
     "thumbnail": "sprout.jpg",
-    "description": "An idle game where you help a little sprout grow from bean to plant",
+    "description": "An idle game where you help a little sprout grow from bean to plant.",
     "url": "https://sprout.maelbrunet.com",
     "code": "https://github.com/maeligg/sprout"
   },
   {
-    "name": "console.❤️",
+    "name": "Responsive tables 101",
+    "publicationYear": "2019",
+    "category": "presentation",
+    "thumbnail": "responsive-tables-101.png",
+    "description": "Tips & tricks to build robust, responsive HTML tables. Presented in March 2019 at the <a href='https://www.creativefrontend.be/'>Creative Front-end Belgium</a> meetup.",
+    "url": "https://slides.com/maelig/responsive-tables-101"
+  },
+  {
+    "name": "Creative Front-end Belgium",
+    "publicationYear": "2019",
+    "category": "website",
+    "thumbnail": "creative-frontend-belgium.svg",
+    "description": "A meetup for front-end developers and web designers interested to share experience with theirs peers.",
+    "url": "https://www.creativefrontend.be/"
+  },
+  {
+    "name": "console.love",
     "publicationYear": "2018",
     "category": "website",
     "thumbnail": "console-love.png",
-    "description": "A collection of funny, quirky and lovely console messages from around the web",
+    "description": "A collection of funny, quirky and lovely console messages from around the web.",
     "url": "https://www.console.love",
     "code": "https://github.com/maeligg/console.love"
   },
@@ -40,7 +82,7 @@
     "publicationYear": "2018",
     "category": "bot",
     "thumbnail": "what-if-paintings.jpg",
-    "description": "A mastodon bot built in Node.js that shares famous paintings recreated in the style of another famous painter, using <a href='https://www.tensorflow.org/'>Tensorflow</a>’s style transfer.",
+    "description": "A mastodon bot that shares famous paintings recreated in the style of another painter, using <a href='https://www.tensorflow.org/'>Tensorflow</a>’s style transfer.",
     "url": "https://botsin.space/@what_if_paintings",
     "code": "https://glitch.com/~what-if-paintings"
   },
@@ -67,18 +109,9 @@
     "publicationYear": "2018",
     "category": "bot",
     "thumbnail": "price-of-things.png",
-    "description": "A Twitter bot built in Node.js that compares the price of random things.",
+    "description": "A Twitter bot that compares the price of random things.",
     "url": "https://twitter.com/relativeprices",
     "code": "https://github.com/maeligg/relative-prices-bot"
-  },
-  {
-    "name": "Historical snaps",
-    "publicationYear": "2018",
-    "category": "website",
-    "thumbnail": "historical-snaps.png",
-    "description": "What if Snapchat came out in 1881 ? A Vue.js app with vintage filters using tracking.js for facial recognition.",
-    "url": "https://historical-snaps.netlify.com",
-    "code": "https://historical-snaps.netlify.com"
   },
   {
     "name": "The Guardian 1959",
@@ -94,7 +127,7 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "icon-system.png",
-    "description": "A presentation about best practices for using icons on the web.",
+    "description": "A presentation about best practices for using icons on the web. Presented in November 2017 at Emakina.",
     "url": "http://slides.com/maelig/in-search-of-the-ideal-icon-system"
   },
   {
@@ -102,7 +135,7 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "future-css.jpg",
-    "description": "A presentation about the new and upcoming CSS specifications.",
+    "description": "A presentation about the new and upcoming CSS specifications. Presented in August 2017 at Emakina.",
     "url": "http://slides.com/maelig/the-future-of-css"
   },
   {
@@ -110,7 +143,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "francais-mofo.jpg",
-    "description": "A Twitter bot built in Node.js that looks for English words used in a French sentence and suggests appropriate translations. Tweets in French.",
+    "description": "A Twitter bot that looks for English words used in a French sentence and suggests appropriate translations. Tweets in French.",
     "url": "https://twitter.com/francais_mofo",
     "code": "https://github.com/maeligg/francais-mofo"
   },
@@ -119,7 +152,7 @@
     "publicationYear": "2017",
     "category": "presentation",
     "thumbnail": "design-systems.svg",
-    "description": "A presentation about design systems, style guides and pattern libraries.",
+    "description": "A presentation about design systems, style guides and pattern libraries. Presented in July 2017 at Emakina.",
     "url": "https://slides.com/maelig/design-systems"
   },
   {
@@ -135,7 +168,7 @@
     "publicationYear": "2017",
     "category": "bot",
     "thumbnail": "js-lib-generator.png",
-    "description": "A Twitter bot built in Node.js that comes up with imaginary JavaScript libraries.",
+    "description": "A Twitter bot that comes up with imaginary JavaScript libraries.",
     "url": "https://twitter.com/JSLibGenerator",
     "code": "https://github.com/maeligg/JSLibGenerator"
   }
