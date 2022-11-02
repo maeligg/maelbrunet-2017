@@ -15,7 +15,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.14.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
